@@ -24,6 +24,7 @@ export function Settings() {
   useEffect(() => { if (open) void refreshProjects().catch((e: unknown) => setMessage(String(e))); }, [open]);
   const run = async (operation: () => Promise<void>) => { setBusy(true); setMessage(''); try { await operation(); } catch (e) { setMessage(e instanceof Error ? e.message : '操作失败'); } finally { setBusy(false); } };
   return <Modal open={open} onClose={close} size="lg" title="设置" description="业务数据保存到本机。普通用户直接用“市场情报 → 添加情报”，不需要 AppID、密钥或 Cookie；模型和 WebDAV 是可选项。">
+    <InfoBanner className="mb-4" tone="brand" title="业务用户不用配置">直接用顶部“添加情报”→“登录窗口采集”，由你本机扫码登录。这里的模型 API 密钥和 WebDAV 是 IT/可选配置，不填也能使用本机编辑、采集和案例库。</InfoBanner>
     <div className="mb-5 flex flex-wrap gap-2 border-b border-line pb-3">{['项目与备份', '模型连接', '跨设备同步（WebDAV）', '模拟案例库'].map((t) => <Button key={t} onClick={() => setTab(t)} variant={tab === t ? 'primary' : 'secondary'}>{t}</Button>)}</div>
     {tab === '模型连接' && <ModelSettings />}
     {tab === '跨设备同步（WebDAV）' && <SyncSettings />}

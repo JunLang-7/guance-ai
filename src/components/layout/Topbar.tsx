@@ -1,4 +1,4 @@
-import { Menu } from 'lucide-react';
+import { Menu, Plus } from 'lucide-react';
 import { useAppStore } from '@/store/appStore';
 import { useUiStore } from '@/store/ui';
 import { useDesktopState } from '@/desktop/client';
@@ -8,6 +8,7 @@ export function Topbar() {
   const openCompany = useUiStore((state) => state.openCompanyDrawer);
   const toggleNav = useUiStore((state) => state.toggleMobileNav);
   const openSettings = useUiStore((state) => state.openSettings);
+  const openQuickAdd = useUiStore((state) => state.openQuickAdd);
   const desktop = useDesktopState();
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-white print-hide">
@@ -29,6 +30,7 @@ export function Topbar() {
         >
           {company.brand}
         </button>
+        {window.guance && <button className="button shrink-0" onClick={() => openQuickAdd()}><Plus size={14} className="mr-1 inline" />添加情报</button>}
         {window.guance && <button className="button shrink-0" onClick={() => openSettings()}>设置</button>}
       </div>
     </header>
