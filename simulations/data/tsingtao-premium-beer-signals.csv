@@ -1,0 +1,11 @@
+﻿ID,标题,平台,类别,优先级,状态,相关性,来源,影响
+S-01,高端啤酒的“第一口体验”比参数更重要,小红书,consumer,high,verified,5,SRC-01,高端线内容要先把“好喝”讲清楚。
+S-02,餐饮场景决定高端啤酒的复购,美团/点评,consumer,high,verified,5,SRC-03,餐饮终端是高端化的关键阵地。
+S-03,低醇/果味吸引年轻人，但老客担心不像啤酒,小红书,consumer,medium,disputed,4,SRC-01,低醇/果味可作为拉新入口，但不能替代核心产品。
+S-04,夜经济与烧烤/海鲜场景强关联,抖音,industry,high,verified,5,SRC-02,夜经济场景适合短视频和同城投放。
+S-05,竞品用套餐和开瓶礼抢占餐饮终端,行业媒体,competitor,high,verified,5,SRC-06,餐饮终端竞争不只是品牌力，还有渠道政策。
+S-06,电商礼盒更看重包装与到货时效,电商平台,consumer,high,verified,5,SRC-04,电商礼盒需要强化包装与履约。
+S-07,青岛啤酒品牌信任度高，但高端线认知不足,问卷,consumer,high,verified,5,SRC-08,高端线需要清楚的系列分层。
+S-08,餐饮老板更关心毛利和退换政策,线下走访,industry,high,verified,5,SRC-07,餐饮渠道政策要算清终端账。
+S-09,夏季体育赛事是场景化内容窗口,行业媒体,industry,medium,verified,4,SRC-05,赛事场景适合做内容联动。
+S-10,本地文旅带来外地游客尝鲜,行业媒体,industry,medium,verified,4,SRC-05,文旅场景适合做地域限定内容。

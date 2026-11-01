@@ -192,7 +192,7 @@ if (primary) app.whenReady().then(async () => {
     if (!existsSync(target) || !target.includes('.')) target = join(client, 'index.html');
     const response = await net.fetch(pathToFileURL(target).href);
     const headers = new Headers(response.headers);
-    headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'");
+    headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'");
     return new Response(response.body, { status: response.status, headers });
   });
   worker = utilityProcess.fork(join(__dirname, 'worker.cjs'));

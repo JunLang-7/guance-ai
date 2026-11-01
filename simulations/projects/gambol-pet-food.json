@@ -1,0 +1,789 @@
+{
+  "schemaVersion": 4,
+  "mode": "demo",
+  "company": {
+    "id": "C-GAMBOL-PET-FOOD",
+    "name": "乖宝宠物食品集团股份有限公司",
+    "brand": "麦富迪 / 弗列加特",
+    "industry": "宠物食品与宠物消费",
+    "region": "山东 · 聊城",
+    "stage": "国产宠物食品上市企业，品牌化增长期",
+    "product": "国产高端宠粮组合（模拟：麦富迪、弗列加特等）",
+    "productSpec": "猫粮/狗粮、功能粮与零食组合；具体配方、价格与宣称以企业实际为准",
+    "goal": "提升国产高端宠粮在抖音/小红书的尝试、复购与宠物店渠道渗透",
+    "budgetCents": 40000000,
+    "campaignStart": "2026-08-01",
+    "campaignEnd": "2026-08-31",
+    "updatedAt": "2026-07-22T10:00:00+08:00"
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "name": "小红书宠物喂养笔记摘录（模拟）",
+      "platform": "小红书",
+      "kind": "consumer",
+      "publishedAt": "2026-07-17",
+      "note": "模拟笔记摘录，不对应真实账号或真实互动量。",
+      "simulated": true,
+      "collectedAt": "2026-07-18T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-02",
+      "name": "抖音宠物达人视频评论（模拟）",
+      "platform": "抖音",
+      "kind": "consumer",
+      "publishedAt": "2026-07-18",
+      "note": "模拟评论集合，用于观察适口性与成分讨论。",
+      "simulated": true,
+      "collectedAt": "2026-07-19T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-03",
+      "name": "天猫宠粮评价摘要（模拟）",
+      "platform": "电商平台",
+      "kind": "consumer",
+      "publishedAt": "2026-07-19",
+      "note": "模拟电商评价摘要，不对应真实订单。",
+      "simulated": true,
+      "collectedAt": "2026-07-20T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-04",
+      "name": "京东宠粮评价摘要（模拟）",
+      "platform": "电商平台",
+      "kind": "consumer",
+      "publishedAt": "2026-07-20",
+      "note": "模拟电商评价摘要，不对应真实订单。",
+      "simulated": true,
+      "collectedAt": "2026-07-21T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-05",
+      "name": "宠物行业观察（模拟）",
+      "platform": "行业媒体",
+      "kind": "industry",
+      "publishedAt": "2026-07-21",
+      "note": "虚构行业观察，仅用于模拟国产高端与功能粮趋势。",
+      "simulated": true,
+      "collectedAt": "2026-07-22T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-06",
+      "name": "竞品冻干/鲜肉动态（模拟）",
+      "platform": "行业媒体",
+      "kind": "competitor",
+      "publishedAt": "2026-07-22",
+      "note": "竞品名称与产品均为模拟。",
+      "simulated": true,
+      "collectedAt": "2026-07-23T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-07",
+      "name": "宠物店走访纪要（模拟）",
+      "platform": "线下走访",
+      "kind": "industry",
+      "publishedAt": "2026-07-23",
+      "note": "模拟宠物店访谈，未进行真实门店访谈。",
+      "simulated": true,
+      "collectedAt": "2026-07-24T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-08",
+      "name": "养宠消费者问卷 n=130（模拟）",
+      "platform": "问卷",
+      "kind": "consumer",
+      "publishedAt": "2026-07-24",
+      "note": "虚构问卷样本，仅作方向性参考。",
+      "simulated": true,
+      "collectedAt": "2026-07-25T10:00:00+08:00",
+      "origin": "demo"
+    }
+  ],
+  "signals": [
+    {
+      "id": "S-01",
+      "title": "成分透明是国产高端粮的第一信任点",
+      "summary": "消费者会看配料表、肉含量、代工厂和检测报告，成分透明是国产高端的第一道信任门槛。",
+      "quote": "“国产可以，但配料表和检测报告要清楚。”",
+      "sourceId": "SRC-01",
+      "platform": "小红书",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "成分透明是国产高端的第一信任点。",
+      "tags": [
+        "成分",
+        "透明",
+        "信任"
+      ],
+      "capturedAt": "2026-07-24T09:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-07-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-02",
+      "title": "适口性决定复购",
+      "summary": "宠物是否爱吃直接影响复购，挑食和换粮困难是常见痛点。",
+      "quote": "“买得再贵，猫不吃也白搭。”",
+      "sourceId": "SRC-02",
+      "platform": "抖音",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "适口性是复购的第一道门槛。",
+      "tags": [
+        "适口性",
+        "挑食",
+        "复购"
+      ],
+      "capturedAt": "2026-07-24T10:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-07-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-03",
+      "title": "肠胃敏感/软便场景是功能粮入口",
+      "summary": "肠胃敏感、软便和毛球等场景让消费者愿意尝试功能粮。",
+      "quote": "“我家猫容易软便，想找一款肠胃友好的。”",
+      "sourceId": "SRC-07",
+      "platform": "线下走访",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "功能粮需要真实喂养反馈。",
+      "tags": [
+        "肠胃",
+        "功能粮",
+        "场景"
+      ],
+      "capturedAt": "2026-07-24T11:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-07-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-04",
+      "title": "进口替代心智正在形成，但仍需证明",
+      "summary": "部分消费者愿意尝试国产高端，但仍担心品质不稳定。",
+      "quote": "“国产现在做得不错，但要长期吃才敢信。”",
+      "sourceId": "SRC-03",
+      "platform": "电商平台",
+      "category": "consumer",
+      "priority": "high",
+      "status": "pending",
+      "relevance": 5,
+      "impact": "国产替代需要长期口碑和检测证明。",
+      "tags": [
+        "国产",
+        "替代",
+        "信任"
+      ],
+      "capturedAt": "2026-07-25T12:00:00+08:00",
+      "note": "待核实：模拟材料，未获得原始证据；不得直接用于对外发布。"
+    },
+    {
+      "id": "S-05",
+      "title": "猫粮与狗粮的购买决策不同",
+      "summary": "猫主人更关注成分和适口性，狗主人更关注体型、运动和性价比。",
+      "quote": "“猫粮更挑，狗粮看体型和活动量。”",
+      "sourceId": "SRC-08",
+      "platform": "问卷",
+      "category": "consumer",
+      "priority": "medium",
+      "status": "verified",
+      "relevance": 4,
+      "impact": "猫狗粮需要分开沟通。",
+      "tags": [
+        "猫粮",
+        "狗粮",
+        "细分"
+      ],
+      "capturedAt": "2026-07-25T13:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-07-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-06",
+      "title": "达人测评与真实喂养记录影响转化",
+      "summary": "消费者信任真实喂养记录和达人长期测评，不太信任单次广告。",
+      "quote": "“看博主长期喂才信，广告看不出来。”",
+      "sourceId": "SRC-02",
+      "platform": "抖音",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "长期喂养记录比单次广告更有说服力。",
+      "tags": [
+        "达人",
+        "测评",
+        "真实"
+      ],
+      "capturedAt": "2026-07-25T14:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-07-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-07",
+      "title": "宠物店推荐仍是高信任渠道",
+      "summary": "宠物店店员的推荐对新手养宠人群影响大，尤其是换粮和功能粮。",
+      "quote": "“新手听店里推荐，店员说好就买。”",
+      "sourceId": "SRC-07",
+      "platform": "线下走访",
+      "category": "industry",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "宠物店是新手的高信任入口。",
+      "tags": [
+        "宠物店",
+        "推荐",
+        "渠道"
+      ],
+      "capturedAt": "2026-07-26T09:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-07-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-08",
+      "title": "竞品用冻干/鲜肉概念抢占高端",
+      "summary": "竞品用冻干、鲜肉、低温烘焙等概念抢占高端心智。",
+      "quote": "“现在都讲冻干鲜肉，国产高端也得跟上。”",
+      "sourceId": "SRC-06",
+      "platform": "行业媒体",
+      "category": "competitor",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "高端概念竞争激烈，需要差异化证据。",
+      "tags": [
+        "竞品",
+        "冻干",
+        "高端"
+      ],
+      "capturedAt": "2026-07-26T10:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-07-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-09",
+      "title": "价格带与成分升级需要匹配",
+      "summary": "消费者愿意为成分升级付费，但价格过高会转向性价比品牌。",
+      "quote": "“升级可以，但别一下贵太多。”",
+      "sourceId": "SRC-03",
+      "platform": "电商平台",
+      "category": "consumer",
+      "priority": "medium",
+      "status": "disputed",
+      "relevance": 4,
+      "impact": "成分升级需要清楚的价值解释。",
+      "tags": [
+        "价格",
+        "成分",
+        "性价比"
+      ],
+      "capturedAt": "2026-07-26T11:00:00+08:00",
+      "note": "待核实：模拟材料，未获得原始证据；不得直接用于对外发布。"
+    },
+    {
+      "id": "S-10",
+      "title": "复购靠订阅/组合装而不是单次促销",
+      "summary": "宠物粮是高频刚需，订阅、组合装和自动复购比单次促销更可持续。",
+      "quote": "“每次都忘了买，能自动续就方便。”",
+      "sourceId": "SRC-07",
+      "platform": "线下走访",
+      "category": "consumer",
+      "priority": "medium",
+      "status": "verified",
+      "relevance": 4,
+      "impact": "订阅和组合装适合高频刚需。",
+      "tags": [
+        "复购",
+        "订阅",
+        "组合装"
+      ],
+      "capturedAt": "2026-07-27T12:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-07-26T16:00:00+08:00"
+    }
+  ],
+  "themes": [
+    {
+      "id": "TH-01",
+      "rank": 1,
+      "title": "成分透明+适口性是第一转化点",
+      "summary": "消费者先看配料和检测，再确认宠物是否爱吃；两者缺一不可。",
+      "mentionCount": 4,
+      "direction": "用检测报告、配料解读和真实喂养记录建立信任。",
+      "confidence": "high",
+      "claimType": "观测事实",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-02",
+        "S-06",
+        "S-09"
+      ],
+      "opportunity": "用“成分+适口性”双证据承接新客。",
+      "caveat": "检测报告和喂养记录需要真实可核验。"
+    },
+    {
+      "id": "TH-02",
+      "rank": 2,
+      "title": "国产高端替代进口的心智窗口",
+      "summary": "国产高端宠粮正在获得尝试机会，但需要长期口碑和品质证明。",
+      "mentionCount": 3,
+      "direction": "用长期喂养记录和复购数据证明稳定性。",
+      "confidence": "high",
+      "claimType": "分析推断",
+      "evidenceSignalIds": [
+        "S-04",
+        "S-08",
+        "S-10"
+      ],
+      "opportunity": "用真实用户故事和检测报告承接进口替代。",
+      "caveat": "一次质量问题可能破坏长期信任。"
+    },
+    {
+      "id": "TH-03",
+      "rank": 3,
+      "title": "猫经济与功能粮细分",
+      "summary": "猫主人更关注成分、适口性和功能场景，功能粮是差异化入口。",
+      "mentionCount": 3,
+      "direction": "按猫/狗、年龄、肠胃、毛球等场景拆分内容。",
+      "confidence": "medium",
+      "claimType": "分析推断",
+      "evidenceSignalIds": [
+        "S-03",
+        "S-05",
+        "S-07"
+      ],
+      "opportunity": "用细分功能粮承接高意向用户。",
+      "caveat": "功能宣称需要合规和真实反馈。"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "OP-01",
+      "title": "成分检测报告可视化",
+      "fact": "成分透明是国产高端第一信任点。",
+      "opportunity": "把检测报告和配料表做成可分享内容。",
+      "verify": "需真实检测报告与授权。",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-04",
+        "S-09"
+      ],
+      "tone": "positive"
+    },
+    {
+      "id": "OP-02",
+      "title": "长期喂养记录计划",
+      "fact": "消费者信任长期真实喂养。",
+      "opportunity": "招募真实用户做30/60天喂养记录。",
+      "verify": "需要真实用户与合规披露。",
+      "evidenceSignalIds": [
+        "S-02",
+        "S-06",
+        "S-07",
+        "S-10"
+      ],
+      "tone": "positive"
+    },
+    {
+      "id": "OP-03",
+      "title": "宠物店新手换粮包",
+      "fact": "宠物店是新手高信任入口。",
+      "opportunity": "做新手换粮包和店员培训。",
+      "verify": "需要门店合作与培训。",
+      "evidenceSignalIds": [
+        "S-07",
+        "S-02",
+        "S-05"
+      ],
+      "tone": "neutral"
+    }
+  ],
+  "plans": [
+    {
+      "id": "PLAN-A",
+      "code": "A",
+      "name": "方案 A：成分透明+达人测评",
+      "shortName": "成分与测评",
+      "positioning": "用可核验成分和真实喂养记录，建立国产高端信任。",
+      "audience": "一二线城市养猫/养狗人群、新手养宠、成分党",
+      "platforms": [
+        "抖音",
+        "小红书",
+        "天猫",
+        "宠物店"
+      ],
+      "formats": [
+        "内容种草",
+        "搜索承接",
+        "私域/渠道承接"
+      ],
+      "timing": "夏季换粮与宠物用品消费期，提前两周做达人内容",
+      "coreMessage": "先看检测报告，再看真实喂养，国产高端可以长期吃。",
+      "rationale": "成分透明和适口性是第一转化点，达人和真实喂养记录能降低信任成本。",
+      "constraints": [
+        "检测报告必须真实可核验",
+        "功能宣称需合规",
+        "不能承诺治疗作用"
+      ],
+      "uncertainties": [
+        "达人合作成本",
+        "真实喂养记录周期长",
+        "竞品冻干概念冲击"
+      ],
+      "channels": [
+        {
+          "channel": "抖音",
+          "role": "达人测评与喂养记录",
+          "budgetCents": 14000000
+        },
+        {
+          "channel": "小红书",
+          "role": "成分解读与真实笔记",
+          "budgetCents": 12000000
+        },
+        {
+          "channel": "天猫",
+          "role": "货架与评价",
+          "budgetCents": 10000000
+        },
+        {
+          "channel": "宠物店",
+          "role": "新手换粮包",
+          "budgetCents": 4000000
+        }
+      ],
+      "evidenceThemeIds": [
+        "TH-01",
+        "TH-02"
+      ],
+      "updatedAt": "2026-07-30T11:00:00+08:00"
+    },
+    {
+      "id": "PLAN-B",
+      "code": "B",
+      "name": "方案 B：宠物店+私域复购",
+      "shortName": "门店复购",
+      "positioning": "用宠物店推荐和私域订阅，做高频复购。",
+      "audience": "宠物店、新手养宠、已有复购用户",
+      "platforms": [
+        "宠物店",
+        "私域",
+        "京东",
+        "视频号"
+      ],
+      "formats": [
+        "内容种草",
+        "搜索承接",
+        "私域/渠道承接"
+      ],
+      "timing": "宠物店秋季订货会前后，私域提前做周期装",
+      "coreMessage": "店里先试吃，回家按周期订阅，不用每次重新选。",
+      "rationale": "宠物粮是高频刚需，宠物店和私域更适合复购，但拉新弱于内容平台。",
+      "constraints": [
+        "门店价格体系",
+        "订阅履约",
+        "私域触达频率"
+      ],
+      "uncertainties": [
+        "门店推荐意愿",
+        "订阅留存",
+        "物流成本"
+      ],
+      "channels": [
+        {
+          "channel": "宠物店",
+          "role": "试吃与推荐",
+          "budgetCents": 14000000
+        },
+        {
+          "channel": "私域",
+          "role": "周期装与复购",
+          "budgetCents": 12000000
+        },
+        {
+          "channel": "京东",
+          "role": "货架与评价",
+          "budgetCents": 8000000
+        },
+        {
+          "channel": "视频号",
+          "role": "品牌与喂养内容",
+          "budgetCents": 6000000
+        }
+      ],
+      "evidenceThemeIds": [
+        "TH-01",
+        "TH-03"
+      ],
+      "updatedAt": "2026-07-30T11:00:00+08:00"
+    }
+  ],
+  "approvals": [
+    {
+      "id": "APR-01",
+      "planId": "PLAN-A",
+      "planCode": "A",
+      "approvedAt": "2026-07-31T17:00:00+08:00",
+      "reason": "模拟审批：方案预算、证据引用和风险约束已核对；所有效果均为模拟假设，执行前需企业真实复核。",
+      "plan": {
+        "id": "PLAN-A",
+        "code": "A",
+        "name": "方案 A：成分透明+达人测评",
+        "shortName": "成分与测评",
+        "positioning": "用可核验成分和真实喂养记录，建立国产高端信任。",
+        "audience": "一二线城市养猫/养狗人群、新手养宠、成分党",
+        "platforms": [
+          "抖音",
+          "小红书",
+          "天猫",
+          "宠物店"
+        ],
+        "formats": [
+          "内容种草",
+          "搜索承接",
+          "私域/渠道承接"
+        ],
+        "timing": "夏季换粮与宠物用品消费期，提前两周做达人内容",
+        "coreMessage": "先看检测报告，再看真实喂养，国产高端可以长期吃。",
+        "rationale": "成分透明和适口性是第一转化点，达人和真实喂养记录能降低信任成本。",
+        "constraints": [
+          "检测报告必须真实可核验",
+          "功能宣称需合规",
+          "不能承诺治疗作用"
+        ],
+        "uncertainties": [
+          "达人合作成本",
+          "真实喂养记录周期长",
+          "竞品冻干概念冲击"
+        ],
+        "channels": [
+          {
+            "channel": "抖音",
+            "role": "达人测评与喂养记录",
+            "budgetCents": 14000000
+          },
+          {
+            "channel": "小红书",
+            "role": "成分解读与真实笔记",
+            "budgetCents": 12000000
+          },
+          {
+            "channel": "天猫",
+            "role": "货架与评价",
+            "budgetCents": 10000000
+          },
+          {
+            "channel": "宠物店",
+            "role": "新手换粮包",
+            "budgetCents": 4000000
+          }
+        ],
+        "evidenceThemeIds": [
+          "TH-01",
+          "TH-02"
+        ],
+        "updatedAt": "2026-07-30T11:00:00+08:00"
+      },
+      "companyBudgetCents": 40000000,
+      "fingerprint": "fp_d5cf5fbd",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-02",
+        "S-04",
+        "S-06",
+        "S-08",
+        "S-09",
+        "S-10"
+      ],
+      "evidence": [
+        {
+          "id": "S-01",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"成分透明是国产高端粮的第一信任点\",\"消费者会看配料表、肉含量、代工厂和检测报告，成分透明是国产高端的第一道信任门槛。\",\"“国产可以，但配料表和检测报告要清楚。”\",\"SRC-01\",\"成分透明是国产高端的第一信任点。\"]"
+        },
+        {
+          "id": "S-02",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"适口性决定复购\",\"宠物是否爱吃直接影响复购，挑食和换粮困难是常见痛点。\",\"“买得再贵，猫不吃也白搭。”\",\"SRC-02\",\"适口性是复购的第一道门槛。\"]"
+        },
+        {
+          "id": "S-04",
+          "priority": "high",
+          "status": "pending",
+          "relevance": 5,
+          "content": "[\"进口替代心智正在形成，但仍需证明\",\"部分消费者愿意尝试国产高端，但仍担心品质不稳定。\",\"“国产现在做得不错，但要长期吃才敢信。”\",\"SRC-03\",\"国产替代需要长期口碑和检测证明。\"]"
+        },
+        {
+          "id": "S-06",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"达人测评与真实喂养记录影响转化\",\"消费者信任真实喂养记录和达人长期测评，不太信任单次广告。\",\"“看博主长期喂才信，广告看不出来。”\",\"SRC-02\",\"长期喂养记录比单次广告更有说服力。\"]"
+        },
+        {
+          "id": "S-08",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"竞品用冻干/鲜肉概念抢占高端\",\"竞品用冻干、鲜肉、低温烘焙等概念抢占高端心智。\",\"“现在都讲冻干鲜肉，国产高端也得跟上。”\",\"SRC-06\",\"高端概念竞争激烈，需要差异化证据。\"]"
+        },
+        {
+          "id": "S-09",
+          "priority": "medium",
+          "status": "disputed",
+          "relevance": 4,
+          "content": "[\"价格带与成分升级需要匹配\",\"消费者愿意为成分升级付费，但价格过高会转向性价比品牌。\",\"“升级可以，但别一下贵太多。”\",\"SRC-03\",\"成分升级需要清楚的价值解释。\"]"
+        },
+        {
+          "id": "S-10",
+          "priority": "medium",
+          "status": "verified",
+          "relevance": 4,
+          "content": "[\"复购靠订阅/组合装而不是单次促销\",\"宠物粮是高频刚需，订阅、组合装和自动复购比单次促销更可持续。\",\"“每次都忘了买，能自动续就方便。”\",\"SRC-07\",\"订阅和组合装适合高频刚需。\"]"
+        }
+      ],
+      "note": "审批快照保存方案、预算上限与关键证据状态；任一项变化需重新确认。"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "REV-01",
+      "approvalId": "APR-01",
+      "planId": "PLAN-A",
+      "dataKind": "simulated",
+      "note": "模拟复盘：渠道数据为假设值，不对应真实广告账户或真实订单。",
+      "observations": "成分透明内容带来高质量新客，达人喂养记录提升转化；但复购仍依赖价格促销和平台活动。宠物店方案稳健但扩张慢。",
+      "possibleReasons": "成分和适口性是真实痛点；真实喂养记录降低了信任成本；但订阅习惯尚未形成，物流和价格影响复购。",
+      "unconfirmed": "长期复购率、不同犬猫品种反馈、宠物店推荐转化和检测报告长期稳定性仍未确认。",
+      "updatedAt": "2026-09-02T15:00:00+08:00",
+      "channels": [
+        {
+          "channel": "抖音",
+          "actualSpendCents": 14000000,
+          "impressions": 3200000,
+          "clicks": 112000,
+          "leads": 1080
+        },
+        {
+          "channel": "小红书",
+          "actualSpendCents": 12000000,
+          "impressions": 2100000,
+          "clicks": 84000,
+          "leads": 900
+        },
+        {
+          "channel": "天猫",
+          "actualSpendCents": 10000000,
+          "impressions": 1600000,
+          "clicks": 56000,
+          "leads": 640
+        },
+        {
+          "channel": "宠物店",
+          "actualSpendCents": 4000000,
+          "impressions": 120000,
+          "clicks": 8000,
+          "leads": 260
+        }
+      ],
+      "suggestions": [
+        {
+          "id": "SUG-01",
+          "title": "把检测报告做成可分享卡片",
+          "detail": "降低成分解释成本，提高信任。",
+          "linkedSignalIds": [
+            "S-01",
+            "S-04",
+            "S-09"
+          ]
+        },
+        {
+          "id": "SUG-02",
+          "title": "做30天喂养记录",
+          "detail": "用真实用户记录承接长期信任。",
+          "linkedSignalIds": [
+            "S-02",
+            "S-06",
+            "S-07"
+          ]
+        },
+        {
+          "id": "SUG-03",
+          "title": "私域订阅先做小范围测试",
+          "detail": "验证复购和履约，再扩大。",
+          "linkedSignalIds": [
+            "S-10",
+            "S-05"
+          ]
+        }
+      ]
+    }
+  ],
+  "feedbackTasks": [
+    {
+      "id": "FT-01",
+      "title": "把检测报告做成可分享卡片",
+      "detail": "降低成分解释成本，提高信任。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-09-03T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-01",
+        "S-04",
+        "S-09"
+      ],
+      "source": "review"
+    },
+    {
+      "id": "FT-02",
+      "title": "做30天喂养记录",
+      "detail": "用真实用户记录承接长期信任。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-09-04T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-02",
+        "S-06",
+        "S-07"
+      ],
+      "source": "review"
+    },
+    {
+      "id": "FT-03",
+      "title": "私域订阅先做小范围测试",
+      "detail": "验证复购和履约，再扩大。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-09-05T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-10",
+        "S-05"
+      ],
+      "source": "review"
+    }
+  ],
+  "decision": {
+    "status": "approved",
+    "planId": "PLAN-A",
+    "updatedAt": "2026-07-31T18:00:00+08:00"
+  },
+  "activePlanId": "PLAN-A"
+}

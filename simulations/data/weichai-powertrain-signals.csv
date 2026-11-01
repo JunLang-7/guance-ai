@@ -1,0 +1,11 @@
+﻿ID,标题,平台,类别,优先级,状态,相关性,来源,影响
+S-01,TCO 是车队客户决策核心,经销商,industry,high,verified,5,SRC-06,TCO 是B2B内容的核心语言。
+S-02,服务网络响应速度比单次报价更重要,展会,industry,high,verified,5,SRC-05,服务网络是差异化关键。
+S-03,国六/新能源动力需要场景化证据,行业媒体,industry,high,pending,5,SRC-01,新技术内容必须用场景数据说话。
+S-04,油耗与可靠性仍是第一比较项,搜索,industry,high,verified,5,SRC-02,内容要优先回答油耗和可靠性。
+S-05,经销商需要培训、金融和配件支持,经销商,industry,high,verified,5,SRC-06,经销商赋能是增长杠杆。
+S-06,竞品用延保和免费检测锁定车队,行业媒体,competitor,high,verified,5,SRC-07,服务政策是B2B竞争焦点。
+S-07,二手商用车残值影响换购,行业媒体,industry,medium,verified,4,SRC-01,残值可作为TCO的一部分沟通。
+S-08,配件真伪和供应及时性影响口碑,经销商,industry,high,verified,5,SRC-06,配件供应链是服务承诺的基础。
+S-09,区域物流集群是集中突破口,行业媒体,industry,medium,verified,4,SRC-01,区域物流集群适合做集中运营。
+S-10,金融方案能降低首付门槛,经销商,industry,medium,verified,4,SRC-06,金融方案是B2B转化的重要工具。

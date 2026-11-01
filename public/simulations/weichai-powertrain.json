@@ -1,0 +1,803 @@
+{
+  "schemaVersion": 4,
+  "mode": "demo",
+  "company": {
+    "id": "C-WEICHAI-POWERTRAIN",
+    "name": "潍柴动力股份有限公司",
+    "brand": "潍柴动力",
+    "industry": "商用车动力与高端装备",
+    "region": "山东 · 潍坊",
+    "stage": "全国化装备制造企业，A+H 上市公司",
+    "product": "商用车动力总成与服务品牌（模拟：国六/新能源动力、服务网络）",
+    "productSpec": "面向车队、经销商与终端客户的动力总成、配件与服务方案；具体产品以企业实际为准",
+    "goal": "获取车队与经销商的高意向线索，验证TCO内容和服务网络内容的B2B获客效果",
+    "budgetCents": 60000000,
+    "campaignStart": "2026-04-01",
+    "campaignEnd": "2026-04-30",
+    "updatedAt": "2026-03-22T10:00:00+08:00"
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "name": "商用车行业媒体摘录（模拟）",
+      "platform": "行业媒体",
+      "kind": "industry",
+      "publishedAt": "2026-03-17",
+      "note": "模拟行业报道摘要，不对应真实媒体或真实数据。",
+      "simulated": true,
+      "collectedAt": "2026-03-18T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-02",
+      "name": "百度搜索词与落地页观察（模拟）",
+      "platform": "搜索",
+      "kind": "industry",
+      "publishedAt": "2026-03-18",
+      "note": "模拟搜索词与落地页观察，不包含真实投放账户数据。",
+      "simulated": true,
+      "collectedAt": "2026-03-19T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-03",
+      "name": "微信公众号内容观察（模拟）",
+      "platform": "微信公众号",
+      "kind": "industry",
+      "publishedAt": "2026-03-19",
+      "note": "模拟公众号内容观察，不对应真实账号。",
+      "simulated": true,
+      "collectedAt": "2026-03-20T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-04",
+      "name": "视频号服务案例观察（模拟）",
+      "platform": "视频号",
+      "kind": "industry",
+      "publishedAt": "2026-03-20",
+      "note": "模拟视频内容观察，不对应真实案例。",
+      "simulated": true,
+      "collectedAt": "2026-03-21T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-05",
+      "name": "展会/行业活动走访（模拟）",
+      "platform": "展会",
+      "kind": "industry",
+      "publishedAt": "2026-03-21",
+      "note": "模拟展会走访纪要，未进行真实访谈。",
+      "simulated": true,
+      "collectedAt": "2026-03-22T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-06",
+      "name": "经销商访谈纪要（模拟）",
+      "platform": "经销商",
+      "kind": "industry",
+      "publishedAt": "2026-03-22",
+      "note": "模拟经销商访谈，不对应真实经销商。",
+      "simulated": true,
+      "collectedAt": "2026-03-23T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-07",
+      "name": "竞品服务政策动态（模拟）",
+      "platform": "行业媒体",
+      "kind": "competitor",
+      "publishedAt": "2026-03-23",
+      "note": "竞品名称与政策均为模拟。",
+      "simulated": true,
+      "collectedAt": "2026-03-24T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-08",
+      "name": "商用车政策公告摘要（模拟）",
+      "platform": "政策公告",
+      "kind": "industry",
+      "publishedAt": "2026-03-24",
+      "note": "模拟政策摘要，执行前需核对官方原文。",
+      "simulated": true,
+      "collectedAt": "2026-03-25T10:00:00+08:00",
+      "origin": "demo"
+    }
+  ],
+  "signals": [
+    {
+      "id": "S-01",
+      "title": "TCO 是车队客户决策核心",
+      "summary": "车队客户关注购车、油耗、维修、停运和残值构成的总拥有成本，而不是单一购车价。",
+      "quote": "“车价是一部分，油耗、维修和停运损失才是大头。”",
+      "sourceId": "SRC-06",
+      "platform": "经销商",
+      "category": "industry",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "TCO 是B2B内容的核心语言。",
+      "tags": [
+        "TCO",
+        "车队",
+        "成本"
+      ],
+      "capturedAt": "2026-03-24T09:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-03-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-02",
+      "title": "服务网络响应速度比单次报价更重要",
+      "summary": "车队客户更怕停运，服务响应速度和备件供应直接影响复购。",
+      "quote": "“价格差不多的话，我肯定选服务网点近、响应快的。”",
+      "sourceId": "SRC-05",
+      "platform": "展会",
+      "category": "industry",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "服务网络是差异化关键。",
+      "tags": [
+        "服务",
+        "响应",
+        "网络"
+      ],
+      "capturedAt": "2026-03-24T10:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-03-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-03",
+      "title": "国六/新能源动力需要场景化证据",
+      "summary": "客户对新技术有顾虑，需要真实运营数据、油耗和故障率证明。",
+      "quote": "“你说省油，得给我看同线路的真实数据。”",
+      "sourceId": "SRC-01",
+      "platform": "行业媒体",
+      "category": "industry",
+      "priority": "high",
+      "status": "pending",
+      "relevance": 5,
+      "impact": "新技术内容必须用场景数据说话。",
+      "tags": [
+        "国六",
+        "新能源",
+        "证据"
+      ],
+      "capturedAt": "2026-03-24T11:00:00+08:00",
+      "note": "待核实：模拟材料，未获得原始证据；不得直接用于对外发布。"
+    },
+    {
+      "id": "S-04",
+      "title": "油耗与可靠性仍是第一比较项",
+      "summary": "无论燃油还是新能源，客户首先比较油耗/能耗、可靠性和维修便利性。",
+      "quote": "“先看省不省、坏不坏，其他都是后面的事。”",
+      "sourceId": "SRC-02",
+      "platform": "搜索",
+      "category": "industry",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "内容要优先回答油耗和可靠性。",
+      "tags": [
+        "油耗",
+        "可靠性",
+        "比较"
+      ],
+      "capturedAt": "2026-03-25T12:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-03-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-05",
+      "title": "经销商需要培训、金融和配件支持",
+      "summary": "经销商希望厂家提供产品培训、金融方案、配件供应和售后支持。",
+      "quote": "“车好不好卖，要看厂家给不给培训和金融支持。”",
+      "sourceId": "SRC-06",
+      "platform": "经销商",
+      "category": "industry",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "经销商赋能是增长杠杆。",
+      "tags": [
+        "经销商",
+        "培训",
+        "金融"
+      ],
+      "capturedAt": "2026-03-25T13:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-03-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-06",
+      "title": "竞品用延保和免费检测锁定车队",
+      "summary": "竞品通过延保、免费检测和驻点服务提高车队粘性。",
+      "quote": "“竞品送延保和免费检测，客户续约就更愿意。”",
+      "sourceId": "SRC-07",
+      "platform": "行业媒体",
+      "category": "competitor",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "服务政策是B2B竞争焦点。",
+      "tags": [
+        "竞品",
+        "延保",
+        "服务"
+      ],
+      "capturedAt": "2026-03-25T14:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-03-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-07",
+      "title": "二手商用车残值影响换购",
+      "summary": "残值影响车队换购决策，品牌保值率是隐性卖点。",
+      "quote": "“卖二手车时保值率差，换车成本就高。”",
+      "sourceId": "SRC-01",
+      "platform": "行业媒体",
+      "category": "industry",
+      "priority": "medium",
+      "status": "verified",
+      "relevance": 4,
+      "impact": "残值可作为TCO的一部分沟通。",
+      "tags": [
+        "残值",
+        "换购",
+        "保值"
+      ],
+      "capturedAt": "2026-03-26T09:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-03-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-08",
+      "title": "配件真伪和供应及时性影响口碑",
+      "summary": "配件真假、价格和到货速度影响维修体验和品牌口碑。",
+      "quote": "“配件等一周，车就停一周，谁受得了。”",
+      "sourceId": "SRC-06",
+      "platform": "经销商",
+      "category": "industry",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "配件供应链是服务承诺的基础。",
+      "tags": [
+        "配件",
+        "供应",
+        "口碑"
+      ],
+      "capturedAt": "2026-03-26T10:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-03-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-09",
+      "title": "区域物流集群是集中突破口",
+      "summary": "物流园区、港口和矿区形成集中客户群，适合做定向内容和服务。",
+      "quote": "“一个园区几十家车队，服务好一家就能带来一串。”",
+      "sourceId": "SRC-01",
+      "platform": "行业媒体",
+      "category": "industry",
+      "priority": "medium",
+      "status": "verified",
+      "relevance": 4,
+      "impact": "区域物流集群适合做集中运营。",
+      "tags": [
+        "物流",
+        "园区",
+        "集群"
+      ],
+      "capturedAt": "2026-03-26T11:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-03-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-10",
+      "title": "金融方案能降低首付门槛",
+      "summary": "金融方案影响车队现金流和换购节奏。",
+      "quote": "“首付低一点，车队压力小，换车就快。”",
+      "sourceId": "SRC-06",
+      "platform": "经销商",
+      "category": "industry",
+      "priority": "medium",
+      "status": "verified",
+      "relevance": 4,
+      "impact": "金融方案是B2B转化的重要工具。",
+      "tags": [
+        "金融",
+        "首付",
+        "换购"
+      ],
+      "capturedAt": "2026-03-27T12:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-03-26T16:00:00+08:00"
+    }
+  ],
+  "themes": [
+    {
+      "id": "TH-01",
+      "rank": 1,
+      "title": "TCO 与服务网络是 B2B 决策双核心",
+      "summary": "车队客户同时计算总拥有成本和服务停运风险，单次报价难以打动。",
+      "mentionCount": 5,
+      "direction": "用TCO计算器和服务网络地图承接高意向。",
+      "confidence": "high",
+      "claimType": "观测事实",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-02",
+        "S-04",
+        "S-07",
+        "S-08"
+      ],
+      "opportunity": "把油耗、维修、停运和残值放进同一个可计算模型。",
+      "caveat": "TCO数据需要真实线路与运营样本支撑。"
+    },
+    {
+      "id": "TH-02",
+      "rank": 2,
+      "title": "新能源动力需要场景化证据",
+      "summary": "新能源重卡在短倒、固定线路和封闭场景更容易算清经济账。",
+      "mentionCount": 3,
+      "direction": "按场景拆分新能源内容，而不是泛泛讲环保。",
+      "confidence": "high",
+      "claimType": "分析推断",
+      "evidenceSignalIds": [
+        "S-03",
+        "S-09",
+        "S-10"
+      ],
+      "opportunity": "用短倒、港口、矿区等场景案例承接。",
+      "caveat": "电池、补能和残值数据仍不充分。"
+    },
+    {
+      "id": "TH-03",
+      "rank": 3,
+      "title": "经销商赋能是增长杠杆",
+      "summary": "经销商需要培训、金融、配件和服务支持，厂家赋能直接影响终端推荐。",
+      "mentionCount": 4,
+      "direction": "把经销商赋能做成可复制的季度计划。",
+      "confidence": "medium",
+      "claimType": "分析推断",
+      "evidenceSignalIds": [
+        "S-05",
+        "S-06",
+        "S-08",
+        "S-10"
+      ],
+      "opportunity": "用培训、金融和配件政策提升终端意愿。",
+      "caveat": "经销商执行差异大，需要样板市场。"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "OP-01",
+      "title": "TCO 计算器",
+      "fact": "车队客户关注总拥有成本。",
+      "opportunity": "做一个可交互的TCO估算工具，承接搜索和行业媒体流量。",
+      "verify": "需要真实油耗、维修和残值数据。",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-02",
+        "S-04",
+        "S-07"
+      ],
+      "tone": "positive"
+    },
+    {
+      "id": "OP-02",
+      "title": "短倒新能源场景包",
+      "fact": "新能源在短倒场景更容易算清账。",
+      "opportunity": "按港口、矿区、园区做场景化内容。",
+      "verify": "需确认补能条件和政策。",
+      "evidenceSignalIds": [
+        "S-03",
+        "S-09",
+        "S-10"
+      ],
+      "tone": "positive"
+    },
+    {
+      "id": "OP-03",
+      "title": "经销商样板市场",
+      "fact": "经销商需要培训和金融支持。",
+      "opportunity": "选一个区域做样板，复制到其他区域。",
+      "verify": "需要经销商真实配合。",
+      "evidenceSignalIds": [
+        "S-05",
+        "S-06",
+        "S-08",
+        "S-10"
+      ],
+      "tone": "neutral"
+    }
+  ],
+  "plans": [
+    {
+      "id": "PLAN-A",
+      "code": "A",
+      "name": "方案 A：TCO 与服务网络",
+      "shortName": "TCO 获客",
+      "positioning": "用可计算的TCO和可核验的服务网络，打动车队客户。",
+      "audience": "山东及周边车队、物流园区、经销商",
+      "platforms": [
+        "百度搜索",
+        "行业媒体",
+        "视频号",
+        "私域/经销商"
+      ],
+      "formats": [
+        "内容种草",
+        "搜索承接",
+        "私域/渠道承接"
+      ],
+      "timing": "春季换购与车队预算期，提前两周布局搜索和行业媒体",
+      "coreMessage": "不算总账，不比服务，不要急着换车。",
+      "rationale": "TCO和服务响应是B2B客户最关心的两个问题，适合用长内容和搜索承接。",
+      "constraints": [
+        "TCO数据必须可核验",
+        "不能承诺未覆盖的服务网络",
+        "金融方案需合规"
+      ],
+      "uncertainties": [
+        "真实油耗数据差异",
+        "新能源政策变化",
+        "经销商执行意愿"
+      ],
+      "channels": [
+        {
+          "channel": "百度搜索",
+          "role": "TCO/服务关键词承接",
+          "budgetCents": 21000000
+        },
+        {
+          "channel": "行业媒体",
+          "role": "TCO与场景内容",
+          "budgetCents": 15000000
+        },
+        {
+          "channel": "视频号",
+          "role": "服务案例与访谈",
+          "budgetCents": 12000000
+        },
+        {
+          "channel": "私域/经销商",
+          "role": "经销商转发与线索跟进",
+          "budgetCents": 12000000
+        }
+      ],
+      "evidenceThemeIds": [
+        "TH-01",
+        "TH-03"
+      ],
+      "updatedAt": "2026-03-30T11:00:00+08:00"
+    },
+    {
+      "id": "PLAN-B",
+      "code": "B",
+      "name": "方案 B：经销商赋能与区域物流",
+      "shortName": "经销商赋能",
+      "positioning": "用经销商培训和区域物流集群，做集中获客。",
+      "audience": "经销商、物流园区、港口/矿区车队",
+      "platforms": [
+        "经销商大会",
+        "行业媒体",
+        "私域/经销商",
+        "展会/活动"
+      ],
+      "formats": [
+        "内容种草",
+        "搜索承接",
+        "私域/渠道承接"
+      ],
+      "timing": "经销商季度会议前后，集中做区域活动",
+      "coreMessage": "厂家给培训、金融、配件和服务，经销商放心卖。",
+      "rationale": "经销商是B2B渠道的关键节点，区域物流集群适合集中运营。",
+      "constraints": [
+        "经销商政策需统一",
+        "区域活动需要真实客户资源"
+      ],
+      "uncertainties": [
+        "经销商参与度",
+        "区域物流景气度"
+      ],
+      "channels": [
+        {
+          "channel": "经销商大会",
+          "role": "培训、政策与动员",
+          "budgetCents": 24000000
+        },
+        {
+          "channel": "行业媒体",
+          "role": "区域物流内容",
+          "budgetCents": 12000000
+        },
+        {
+          "channel": "私域/经销商",
+          "role": "线索跟进",
+          "budgetCents": 12000000
+        },
+        {
+          "channel": "展会/活动",
+          "role": "区域客户面对面",
+          "budgetCents": 12000000
+        }
+      ],
+      "evidenceThemeIds": [
+        "TH-01",
+        "TH-02"
+      ],
+      "updatedAt": "2026-03-30T11:00:00+08:00"
+    }
+  ],
+  "approvals": [
+    {
+      "id": "APR-01",
+      "planId": "PLAN-A",
+      "planCode": "A",
+      "approvedAt": "2026-03-31T17:00:00+08:00",
+      "reason": "模拟审批：方案预算、证据引用和风险约束已核对；所有效果均为模拟假设，执行前需企业真实复核。",
+      "plan": {
+        "id": "PLAN-A",
+        "code": "A",
+        "name": "方案 A：TCO 与服务网络",
+        "shortName": "TCO 获客",
+        "positioning": "用可计算的TCO和可核验的服务网络，打动车队客户。",
+        "audience": "山东及周边车队、物流园区、经销商",
+        "platforms": [
+          "百度搜索",
+          "行业媒体",
+          "视频号",
+          "私域/经销商"
+        ],
+        "formats": [
+          "内容种草",
+          "搜索承接",
+          "私域/渠道承接"
+        ],
+        "timing": "春季换购与车队预算期，提前两周布局搜索和行业媒体",
+        "coreMessage": "不算总账，不比服务，不要急着换车。",
+        "rationale": "TCO和服务响应是B2B客户最关心的两个问题，适合用长内容和搜索承接。",
+        "constraints": [
+          "TCO数据必须可核验",
+          "不能承诺未覆盖的服务网络",
+          "金融方案需合规"
+        ],
+        "uncertainties": [
+          "真实油耗数据差异",
+          "新能源政策变化",
+          "经销商执行意愿"
+        ],
+        "channels": [
+          {
+            "channel": "百度搜索",
+            "role": "TCO/服务关键词承接",
+            "budgetCents": 21000000
+          },
+          {
+            "channel": "行业媒体",
+            "role": "TCO与场景内容",
+            "budgetCents": 15000000
+          },
+          {
+            "channel": "视频号",
+            "role": "服务案例与访谈",
+            "budgetCents": 12000000
+          },
+          {
+            "channel": "私域/经销商",
+            "role": "经销商转发与线索跟进",
+            "budgetCents": 12000000
+          }
+        ],
+        "evidenceThemeIds": [
+          "TH-01",
+          "TH-03"
+        ],
+        "updatedAt": "2026-03-30T11:00:00+08:00"
+      },
+      "companyBudgetCents": 60000000,
+      "fingerprint": "fp_3b4cc6dd",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-02",
+        "S-04",
+        "S-05",
+        "S-06",
+        "S-07",
+        "S-08",
+        "S-10"
+      ],
+      "evidence": [
+        {
+          "id": "S-01",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"TCO 是车队客户决策核心\",\"车队客户关注购车、油耗、维修、停运和残值构成的总拥有成本，而不是单一购车价。\",\"“车价是一部分，油耗、维修和停运损失才是大头。”\",\"SRC-06\",\"TCO 是B2B内容的核心语言。\"]"
+        },
+        {
+          "id": "S-02",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"服务网络响应速度比单次报价更重要\",\"车队客户更怕停运，服务响应速度和备件供应直接影响复购。\",\"“价格差不多的话，我肯定选服务网点近、响应快的。”\",\"SRC-05\",\"服务网络是差异化关键。\"]"
+        },
+        {
+          "id": "S-04",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"油耗与可靠性仍是第一比较项\",\"无论燃油还是新能源，客户首先比较油耗/能耗、可靠性和维修便利性。\",\"“先看省不省、坏不坏，其他都是后面的事。”\",\"SRC-02\",\"内容要优先回答油耗和可靠性。\"]"
+        },
+        {
+          "id": "S-05",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"经销商需要培训、金融和配件支持\",\"经销商希望厂家提供产品培训、金融方案、配件供应和售后支持。\",\"“车好不好卖，要看厂家给不给培训和金融支持。”\",\"SRC-06\",\"经销商赋能是增长杠杆。\"]"
+        },
+        {
+          "id": "S-06",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"竞品用延保和免费检测锁定车队\",\"竞品通过延保、免费检测和驻点服务提高车队粘性。\",\"“竞品送延保和免费检测，客户续约就更愿意。”\",\"SRC-07\",\"服务政策是B2B竞争焦点。\"]"
+        },
+        {
+          "id": "S-07",
+          "priority": "medium",
+          "status": "verified",
+          "relevance": 4,
+          "content": "[\"二手商用车残值影响换购\",\"残值影响车队换购决策，品牌保值率是隐性卖点。\",\"“卖二手车时保值率差，换车成本就高。”\",\"SRC-01\",\"残值可作为TCO的一部分沟通。\"]"
+        },
+        {
+          "id": "S-08",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"配件真伪和供应及时性影响口碑\",\"配件真假、价格和到货速度影响维修体验和品牌口碑。\",\"“配件等一周，车就停一周，谁受得了。”\",\"SRC-06\",\"配件供应链是服务承诺的基础。\"]"
+        },
+        {
+          "id": "S-10",
+          "priority": "medium",
+          "status": "verified",
+          "relevance": 4,
+          "content": "[\"金融方案能降低首付门槛\",\"金融方案影响车队现金流和换购节奏。\",\"“首付低一点，车队压力小，换车就快。”\",\"SRC-06\",\"金融方案是B2B转化的重要工具。\"]"
+        }
+      ],
+      "note": "审批快照保存方案、预算上限与关键证据状态；任一项变化需重新确认。"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "REV-01",
+      "approvalId": "APR-01",
+      "planId": "PLAN-A",
+      "dataKind": "simulated",
+      "note": "模拟复盘：渠道数据为假设值，不对应真实广告账户或真实订单。",
+      "observations": "TCO内容带来的线索质量高于泛品牌内容，但线索量低于预期；服务网络和配件供应的具体问题成为跟进中的主要障碍。新能源内容互动高，但真实转化尚未验证。",
+      "possibleReasons": "TCO是车队客户真实语言；搜索和行业媒体能带来高意向；但服务网络覆盖、配件供应和金融方案没有形成闭环。",
+      "unconfirmed": "真实TCO节省金额、不同区域服务覆盖、新能源客户真实运营数据仍未确认。",
+      "updatedAt": "2026-05-02T15:00:00+08:00",
+      "channels": [
+        {
+          "channel": "百度搜索",
+          "actualSpendCents": 21000000,
+          "impressions": 480000,
+          "clicks": 9600,
+          "leads": 90
+        },
+        {
+          "channel": "行业媒体",
+          "actualSpendCents": 15000000,
+          "impressions": 320000,
+          "clicks": 4800,
+          "leads": 62
+        },
+        {
+          "channel": "视频号",
+          "actualSpendCents": 12000000,
+          "impressions": 600000,
+          "clicks": 9000,
+          "leads": 44
+        },
+        {
+          "channel": "私域/经销商",
+          "actualSpendCents": 12000000,
+          "impressions": 180000,
+          "clicks": 4200,
+          "leads": 48
+        }
+      ],
+      "suggestions": [
+        {
+          "id": "SUG-01",
+          "title": "TCO计算器补上真实线路样本",
+          "detail": "没有真实油耗和停运数据，TCO只是概念。",
+          "linkedSignalIds": [
+            "S-01",
+            "S-02",
+            "S-04",
+            "S-07"
+          ]
+        },
+        {
+          "id": "SUG-02",
+          "title": "服务网络按区域做覆盖图",
+          "detail": "让客户能查到服务网点、备件和响应时间。",
+          "linkedSignalIds": [
+            "S-02",
+            "S-05",
+            "S-08"
+          ]
+        },
+        {
+          "id": "SUG-03",
+          "title": "新能源内容先做短倒样板",
+          "detail": "用港口/矿区真实运营数据验证，再做大规模内容。",
+          "linkedSignalIds": [
+            "S-03",
+            "S-09",
+            "S-10"
+          ]
+        }
+      ]
+    }
+  ],
+  "feedbackTasks": [
+    {
+      "id": "FT-01",
+      "title": "TCO计算器补上真实线路样本",
+      "detail": "没有真实油耗和停运数据，TCO只是概念。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-05-03T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-01",
+        "S-02",
+        "S-04",
+        "S-07"
+      ],
+      "source": "review"
+    },
+    {
+      "id": "FT-02",
+      "title": "服务网络按区域做覆盖图",
+      "detail": "让客户能查到服务网点、备件和响应时间。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-05-04T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-02",
+        "S-05",
+        "S-08"
+      ],
+      "source": "review"
+    },
+    {
+      "id": "FT-03",
+      "title": "新能源内容先做短倒样板",
+      "detail": "用港口/矿区真实运营数据验证，再做大规模内容。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-05-05T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-03",
+        "S-09",
+        "S-10"
+      ],
+      "source": "review"
+    }
+  ],
+  "decision": {
+    "status": "approved",
+    "planId": "PLAN-A",
+    "updatedAt": "2026-03-31T18:00:00+08:00"
+  },
+  "activePlanId": "PLAN-A"
+}

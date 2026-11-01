@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "haier-smart-home",
+    "name": "海尔智家股份有限公司",
+    "industry": "智能家电与全屋智能",
+    "region": "山东 · 青岛",
+    "budgetYuan": 1200000,
+    "targetLeads": 1500,
+    "leads": 1690,
+    "credibility": 75.9,
+    "satisfaction": 4.2,
+    "fit": "高",
+    "projectFile": "haier-smart-home.json",
+    "reportFile": "reports/haier-smart-home.md"
+  },
+  {
+    "slug": "tsingtao-premium-beer",
+    "name": "青岛啤酒股份有限公司",
+    "industry": "啤酒与高端饮品",
+    "region": "山东 · 青岛",
+    "budgetYuan": 800000,
+    "targetLeads": 8000,
+    "leads": 8340,
+    "credibility": 86.2,
+    "satisfaction": 4.0,
+    "fit": "较高",
+    "projectFile": "tsingtao-premium-beer.json",
+    "reportFile": "reports/tsingtao-premium-beer.md"
+  },
+  {
+    "slug": "weichai-powertrain",
+    "name": "潍柴动力股份有限公司",
+    "industry": "商用车动力与高端装备",
+    "region": "山东 · 潍坊",
+    "budgetYuan": 600000,
+    "targetLeads": 260,
+    "leads": 244,
+    "credibility": 70.5,
+    "satisfaction": 3.8,
+    "fit": "中高",
+    "projectFile": "weichai-powertrain.json",
+    "reportFile": "reports/weichai-powertrain.md"
+  },
+  {
+    "slug": "dongee-ejiao",
+    "name": "东阿阿胶股份有限公司",
+    "industry": "滋补健康与中式养生",
+    "region": "山东 · 聊城",
+    "budgetYuan": 500000,
+    "targetLeads": 1600,
+    "leads": 1550,
+    "credibility": 69.8,
+    "satisfaction": 3.5,
+    "fit": "中",
+    "projectFile": "dongee-ejiao.json",
+    "reportFile": "reports/dongee-ejiao.md"
+  },
+  {
+    "slug": "gambol-pet-food",
+    "name": "乖宝宠物食品集团股份有限公司",
+    "industry": "宠物食品与宠物消费",
+    "region": "山东 · 聊城",
+    "budgetYuan": 400000,
+    "targetLeads": 3000,
+    "leads": 2880,
+    "credibility": 74.2,
+    "satisfaction": 4.1,
+    "fit": "较高",
+    "projectFile": "gambol-pet-food.json",
+    "reportFile": "reports/gambol-pet-food.md"
+  }
+]

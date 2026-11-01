@@ -32,6 +32,10 @@
     "errors": []
   },
   {
+    "name": "native-1440-1-settings-cases",
+    "errors": []
+  },
+  {
     "name": "native-1440-1.25-dashboard",
     "errors": []
   },
@@ -61,6 +65,10 @@
   },
   {
     "name": "native-1440-1.25-settings-sync",
+    "errors": []
+  },
+  {
+    "name": "native-1440-1.25-settings-cases",
     "errors": []
   },
   {
@@ -96,6 +104,10 @@
     "errors": []
   },
   {
+    "name": "native-1440-1.5-settings-cases",
+    "errors": []
+  },
+  {
     "name": "native-1366-1-dashboard",
     "errors": []
   },
@@ -125,6 +137,10 @@
   },
   {
     "name": "native-1366-1-settings-sync",
+    "errors": []
+  },
+  {
+    "name": "native-1366-1-settings-cases",
     "errors": []
   },
   {
@@ -160,6 +176,10 @@
     "errors": []
   },
   {
+    "name": "native-1366-1.25-settings-cases",
+    "errors": []
+  },
+  {
     "name": "native-1366-1.5-dashboard",
     "errors": []
   },
@@ -189,6 +209,10 @@
   },
   {
     "name": "native-1366-1.5-settings-sync",
+    "errors": []
+  },
+  {
+    "name": "native-1366-1.5-settings-cases",
     "errors": []
   },
   {
@@ -224,6 +248,10 @@
     "errors": []
   },
   {
+    "name": "native-1280-1-settings-cases",
+    "errors": []
+  },
+  {
     "name": "native-1280-1.25-dashboard",
     "errors": []
   },
@@ -253,6 +281,10 @@
   },
   {
     "name": "native-1280-1.25-settings-sync",
+    "errors": []
+  },
+  {
+    "name": "native-1280-1.25-settings-cases",
     "errors": []
   },
   {
@@ -288,6 +320,10 @@
     "errors": []
   },
   {
+    "name": "native-1280-1.5-settings-cases",
+    "errors": []
+  },
+  {
     "name": "native-1024-1-dashboard",
     "errors": []
   },
@@ -317,6 +353,10 @@
   },
   {
     "name": "native-1024-1-settings-sync",
+    "errors": []
+  },
+  {
+    "name": "native-1024-1-settings-cases",
     "errors": []
   },
   {
@@ -352,6 +392,10 @@
     "errors": []
   },
   {
+    "name": "native-1024-1.25-settings-cases",
+    "errors": []
+  },
+  {
     "name": "native-1024-1.5-dashboard",
     "errors": []
   },
@@ -381,6 +425,10 @@
   },
   {
     "name": "native-1024-1.5-settings-sync",
+    "errors": []
+  },
+  {
+    "name": "native-1024-1.5-settings-cases",
     "errors": []
   }
 ]

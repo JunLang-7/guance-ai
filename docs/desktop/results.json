@@ -1,11 +1,12 @@
 {
-  "at": "2026-10-30T14:08:51.623Z",
+  "at": "2026-11-01T07:42:21.702Z",
   "platform": "win32",
-  "data": "C:\\Users\\27796\\AppData\\Local\\Temp\\guance-desktop-5HMLWY",
+  "data": "C:\\Users\\27796\\AppData\\Local\\Temp\\guance-desktop-0LIfhR",
   "results": [
     "渲染页面无Node权限",
     "win32系统加密实际保存测试凭据；本机HTTP协议端到端生成与引用审计（非真实模型）",
     "IPC白名单拒绝未声明命令",
+    "模拟案例库加载5家山东企业案例",
     "多项目隔离与真实项目重置保护",
     "桌面“添加情报”入口可打开，明确无需登录或应用密钥",
     "桌面CSV人工导入与实际JSON下载；自定义协议/CSP下导出正常，业务导出无凭据",

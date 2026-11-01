@@ -1,0 +1,11 @@
+﻿ID,标题,平台,类别,优先级,状态,相关性,来源,影响
+S-01,全屋智能咨询先问“能不能一站式落地”,小红书,consumer,high,verified,5,SRC-01,一站式交付是高端套系的第一信任门槛。
+S-02,旧房改造最怕施工复杂和破坏装修,家装社区,consumer,high,verified,5,SRC-03,旧房轻改造是比新房更明确的痛点入口。
+S-03,不同品牌设备不互通是首要顾虑,抖音,consumer,high,pending,5,SRC-02,需要把开放互联和已购设备兼容讲清楚。
+S-04,高端套系的价格敏感点转向设计、安装和服务,电商平台,consumer,high,verified,5,SRC-04,高端套系的价值表达要从硬件转向服务。
+S-05,卡萨帝认知强，但年轻用户觉得有距离感,小红书,consumer,medium,pending,4,SRC-01,高端品牌需要更年轻的内容翻译。
+S-06,竞品用“轻量改造”切入旧房市场,行业媒体,competitor,high,verified,5,SRC-06,旧房轻改造是可被竞品快速占位的入口。
+S-07,门店体验与线上内容不一致会流失高意向咨询,线下走访,consumer,high,verified,5,SRC-07,线上承诺必须与门店口径统一。
+S-08,春季家装节前“全屋智能”搜索升温,行业媒体,industry,medium,verified,4,SRC-05,春季是家装决策窗口，需要提前准备内容。
+S-09,交付周期和安装责任边界决定成交,抖音,consumer,high,verified,5,SRC-02,交付承诺需要可核验、可追责。
+S-10,设计师和装修公司是重要影响者,线下走访,industry,medium,verified,4,SRC-07,设计师渠道适合做高意向、长决策的内容。

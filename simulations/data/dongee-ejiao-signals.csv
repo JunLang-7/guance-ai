@@ -1,0 +1,11 @@
+﻿ID,标题,平台,类别,优先级,状态,相关性,来源,影响
+S-01,即食化/便携是年轻用户尝试的第一理由,小红书,consumer,high,verified,5,SRC-01,即食化是降低尝试门槛的关键。
+S-02,功效表达必须合规，用户也在找证据,行业媒体,industry,high,verified,5,SRC-05,功效表达必须合规、可验证。
+S-03,口感与甜度影响复购,小红书,consumer,high,verified,5,SRC-01,口感是即食化的第二道门槛。
+S-04,价格带与日常滋补频次不匹配,问卷,consumer,high,disputed,5,SRC-08,需要用小规格/组合装降低日常门槛。
+S-05,送礼场景看重品牌与包装，自用看重方便,抖音,consumer,high,verified,5,SRC-02,礼品与自用需要分开沟通。
+S-06,国潮与“新中式养生”带来内容窗口,行业媒体,industry,medium,verified,4,SRC-05,国潮内容要现代、轻松。
+S-07,竞品用零食化产品切年轻市场,行业媒体,competitor,high,verified,5,SRC-06,零食化是竞争方向，但需保持功效信任。
+S-08,私域用户更愿意接受组合装,私域,consumer,medium,verified,4,SRC-07,私域适合做周期装和复购。
+S-09,电商评价里“是否上火/适合人群”被反复询问,电商平台,consumer,high,pending,5,SRC-03,需要把适用人群和禁忌讲清楚。
+S-10,用户对阿胶功效的信任来自长期品牌而非单次广告,问卷,consumer,high,verified,5,SRC-08,品牌信任是资产，但不能替代合规证据。

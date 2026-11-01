@@ -1,0 +1,789 @@
+{
+  "schemaVersion": 4,
+  "mode": "demo",
+  "company": {
+    "id": "C-DONGEE-EJIAO",
+    "name": "东阿阿胶股份有限公司",
+    "brand": "东阿阿胶",
+    "industry": "滋补健康与中式养生",
+    "region": "山东 · 聊城",
+    "stage": "老字号品牌，A股上市公司",
+    "product": "阿胶及即食滋补组合（模拟：阿胶块、复方阿胶浆、桃花姬等）",
+    "productSpec": "即食化、便携化与礼品装组合；具体产品与功效表达以企业合规口径为准",
+    "goal": "提升年轻女性与礼品场景的尝试、复购与私域沉淀",
+    "budgetCents": 50000000,
+    "campaignStart": "2026-09-01",
+    "campaignEnd": "2026-09-30",
+    "updatedAt": "2026-08-22T10:00:00+08:00"
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "name": "小红书滋补/即食笔记摘录（模拟）",
+      "platform": "小红书",
+      "kind": "consumer",
+      "publishedAt": "2026-08-17",
+      "note": "模拟笔记摘录，不对应真实账号或真实互动量。",
+      "simulated": true,
+      "collectedAt": "2026-08-18T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-02",
+      "name": "抖音养生短视频评论（模拟）",
+      "platform": "抖音",
+      "kind": "consumer",
+      "publishedAt": "2026-08-18",
+      "note": "模拟评论集合，用于观察年轻消费者语言。",
+      "simulated": true,
+      "collectedAt": "2026-08-19T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-03",
+      "name": "天猫阿胶/即食滋补评价摘要（模拟）",
+      "platform": "电商平台",
+      "kind": "consumer",
+      "publishedAt": "2026-08-19",
+      "note": "模拟电商评价摘要，不对应真实订单。",
+      "simulated": true,
+      "collectedAt": "2026-08-20T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-04",
+      "name": "京东礼品与健康品评价摘要（模拟）",
+      "platform": "电商平台",
+      "kind": "consumer",
+      "publishedAt": "2026-08-20",
+      "note": "模拟礼品评价摘要，不对应真实订单。",
+      "simulated": true,
+      "collectedAt": "2026-08-21T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-05",
+      "name": "中式养生行业观察（模拟）",
+      "platform": "行业媒体",
+      "kind": "industry",
+      "publishedAt": "2026-08-21",
+      "note": "虚构行业观察，仅用于模拟国潮养生背景。",
+      "simulated": true,
+      "collectedAt": "2026-08-22T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-06",
+      "name": "竞品零食化滋补动态（模拟）",
+      "platform": "行业媒体",
+      "kind": "competitor",
+      "publishedAt": "2026-08-22",
+      "note": "竞品名称与产品均为模拟。",
+      "simulated": true,
+      "collectedAt": "2026-08-23T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-07",
+      "name": "私域用户访谈纪要（模拟）",
+      "platform": "私域",
+      "kind": "consumer",
+      "publishedAt": "2026-08-23",
+      "note": "模拟私域访谈，不对应真实用户。",
+      "simulated": true,
+      "collectedAt": "2026-08-24T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-08",
+      "name": "消费者问卷 n=110（模拟）",
+      "platform": "问卷",
+      "kind": "consumer",
+      "publishedAt": "2026-08-24",
+      "note": "虚构问卷样本，仅作方向性参考。",
+      "simulated": true,
+      "collectedAt": "2026-08-25T10:00:00+08:00",
+      "origin": "demo"
+    }
+  ],
+  "signals": [
+    {
+      "id": "S-01",
+      "title": "即食化/便携是年轻用户尝试的第一理由",
+      "summary": "年轻用户愿意尝试即食、便携、口感友好的滋补产品，但不愿处理传统阿胶块的复杂做法。",
+      "quote": "“阿胶块我不会熬，即食的可以当零食试试。”",
+      "sourceId": "SRC-01",
+      "platform": "小红书",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "即食化是降低尝试门槛的关键。",
+      "tags": [
+        "即食",
+        "便携",
+        "年轻化"
+      ],
+      "capturedAt": "2026-08-24T09:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-08-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-02",
+      "title": "功效表达必须合规，用户也在找证据",
+      "summary": "消费者关注功效，但对夸大宣传警惕，愿意看成分、工艺和真实体验。",
+      "quote": "“别说包治百病，告诉我适合什么人群、怎么吃就行。”",
+      "sourceId": "SRC-05",
+      "platform": "行业媒体",
+      "category": "industry",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "功效表达必须合规、可验证。",
+      "tags": [
+        "功效",
+        "合规",
+        "证据"
+      ],
+      "capturedAt": "2026-08-24T10:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-08-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-03",
+      "title": "口感与甜度影响复购",
+      "summary": "即食产品的口感、甜度和腻感直接影响复购。",
+      "quote": "“太甜了吃一次就不想再买，口感很重要。”",
+      "sourceId": "SRC-01",
+      "platform": "小红书",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "口感是即食化的第二道门槛。",
+      "tags": [
+        "口感",
+        "甜度",
+        "复购"
+      ],
+      "capturedAt": "2026-08-24T11:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-08-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-04",
+      "title": "价格带与日常滋补频次不匹配",
+      "summary": "部分用户认为日常滋补价格偏高，难以形成高频复购。",
+      "quote": "“偶尔吃可以，天天吃有点贵。”",
+      "sourceId": "SRC-08",
+      "platform": "问卷",
+      "category": "consumer",
+      "priority": "high",
+      "status": "disputed",
+      "relevance": 5,
+      "impact": "需要用小规格/组合装降低日常门槛。",
+      "tags": [
+        "价格",
+        "频次",
+        "复购"
+      ],
+      "capturedAt": "2026-08-25T12:00:00+08:00",
+      "note": "待核实：模拟材料，未获得原始证据；不得直接用于对外发布。"
+    },
+    {
+      "id": "S-05",
+      "title": "送礼场景看重品牌与包装，自用看重方便",
+      "summary": "送礼用户看重品牌、包装和体面；自用用户更关心方便、口感和价格。",
+      "quote": "“送长辈要看起来正式，自己吃越方便越好。”",
+      "sourceId": "SRC-02",
+      "platform": "抖音",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "礼品与自用需要分开沟通。",
+      "tags": [
+        "送礼",
+        "自用",
+        "场景"
+      ],
+      "capturedAt": "2026-08-25T13:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-08-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-06",
+      "title": "国潮与“新中式养生”带来内容窗口",
+      "summary": "年轻消费者对国潮养生感兴趣，但要求现代、轻松、可执行。",
+      "quote": "“新中式养生可以，但别搞得太玄。”",
+      "sourceId": "SRC-05",
+      "platform": "行业媒体",
+      "category": "industry",
+      "priority": "medium",
+      "status": "verified",
+      "relevance": 4,
+      "impact": "国潮内容要现代、轻松。",
+      "tags": [
+        "国潮",
+        "养生",
+        "年轻化"
+      ],
+      "capturedAt": "2026-08-25T14:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-08-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-07",
+      "title": "竞品用零食化产品切年轻市场",
+      "summary": "竞品用即食、零食化、便携包装吸引年轻用户，降低传统滋补的距离感。",
+      "quote": "“现在很多即食的，像零食一样，方便带。”",
+      "sourceId": "SRC-06",
+      "platform": "行业媒体",
+      "category": "competitor",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "零食化是竞争方向，但需保持功效信任。",
+      "tags": [
+        "竞品",
+        "零食化",
+        "便携"
+      ],
+      "capturedAt": "2026-08-26T09:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-08-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-08",
+      "title": "私域用户更愿意接受组合装",
+      "summary": "私域用户对组合装、周期装的接受度更高，但需要明确使用周期。",
+      "quote": "“组合装可以，但要告诉我怎么吃、吃多久。”",
+      "sourceId": "SRC-07",
+      "platform": "私域",
+      "category": "consumer",
+      "priority": "medium",
+      "status": "verified",
+      "relevance": 4,
+      "impact": "私域适合做周期装和复购。",
+      "tags": [
+        "私域",
+        "组合装",
+        "周期"
+      ],
+      "capturedAt": "2026-08-26T10:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-08-26T16:00:00+08:00"
+    },
+    {
+      "id": "S-09",
+      "title": "电商评价里“是否上火/适合人群”被反复询问",
+      "summary": "用户对适合人群、体质和食用禁忌有疑问，需要清晰说明。",
+      "quote": "“我这种体质能不能吃？会不会上火？”",
+      "sourceId": "SRC-03",
+      "platform": "电商平台",
+      "category": "consumer",
+      "priority": "high",
+      "status": "pending",
+      "relevance": 5,
+      "impact": "需要把适用人群和禁忌讲清楚。",
+      "tags": [
+        "适合人群",
+        "禁忌",
+        "信任"
+      ],
+      "capturedAt": "2026-08-26T11:00:00+08:00",
+      "note": "待核实：模拟材料，未获得原始证据；不得直接用于对外发布。"
+    },
+    {
+      "id": "S-10",
+      "title": "用户对阿胶功效的信任来自长期品牌而非单次广告",
+      "summary": "消费者更信任老字号品牌和长期口碑，单次广告难以建立功效信任。",
+      "quote": "“老品牌肯定更信，但广告说效果多好我不太信。”",
+      "sourceId": "SRC-08",
+      "platform": "问卷",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "品牌信任是资产，但不能替代合规证据。",
+      "tags": [
+        "品牌",
+        "信任",
+        "功效"
+      ],
+      "capturedAt": "2026-08-27T12:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-08-26T16:00:00+08:00"
+    }
+  ],
+  "themes": [
+    {
+      "id": "TH-01",
+      "rank": 1,
+      "title": "即食化降低尝试门槛",
+      "summary": "即食、便携、口感友好的产品更容易让年轻用户第一次尝试。",
+      "mentionCount": 4,
+      "direction": "用“像零食一样方便”降低距离感，同时保留品牌专业感。",
+      "confidence": "high",
+      "claimType": "观测事实",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-03",
+        "S-07",
+        "S-05"
+      ],
+      "opportunity": "用即食子品牌和小规格承接年轻用户。",
+      "caveat": "即食化可能削弱传统阿胶的专业形象。"
+    },
+    {
+      "id": "TH-02",
+      "rank": 2,
+      "title": "功效表达必须合规且可验证",
+      "summary": "消费者关注功效，但对夸大宣传警惕，需要成分、工艺和适用人群说明。",
+      "mentionCount": 3,
+      "direction": "把功效表达转为“适用人群+使用方式+可核验信息”。",
+      "confidence": "high",
+      "claimType": "分析推断",
+      "evidenceSignalIds": [
+        "S-02",
+        "S-09",
+        "S-10"
+      ],
+      "opportunity": "用合规内容建立信任，而不是夸大承诺。",
+      "caveat": "合规审核可能限制内容表达。"
+    },
+    {
+      "id": "TH-03",
+      "rank": 3,
+      "title": "礼品与自用场景分开沟通",
+      "summary": "送礼看重品牌、包装和体面，自用看重方便、口感和价格。",
+      "mentionCount": 3,
+      "direction": "用两套内容分别承接礼品和自用需求。",
+      "confidence": "medium",
+      "claimType": "分析推断",
+      "evidenceSignalIds": [
+        "S-05",
+        "S-08",
+        "S-04"
+      ],
+      "opportunity": "礼品渠道做定制与履约，自用渠道做即食与复购。",
+      "caveat": "两套内容可能造成品牌信息分散。"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "OP-01",
+      "title": "即食子品牌年轻化内容",
+      "fact": "即食产品认知高于阿胶块。",
+      "opportunity": "用即食子品牌做年轻用户入口，再引导了解品牌。",
+      "verify": "需核对真实产品线与功效口径。",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-03",
+        "S-07",
+        "S-05"
+      ],
+      "tone": "positive"
+    },
+    {
+      "id": "OP-02",
+      "title": "私域周期装",
+      "fact": "私域用户接受组合装。",
+      "opportunity": "设计周期装和复购提醒，提升复购。",
+      "verify": "需要真实用户数据与合规触达。",
+      "evidenceSignalIds": [
+        "S-08",
+        "S-05",
+        "S-10"
+      ],
+      "tone": "positive"
+    },
+    {
+      "id": "OP-03",
+      "title": "企业礼品合规履约包",
+      "fact": "礼品渠道需要发票、定制和交付证明。",
+      "opportunity": "做企业礼品服务包，明确开票、定制和交付。",
+      "verify": "需要供应链与财务支持。",
+      "evidenceSignalIds": [
+        "S-05",
+        "S-02",
+        "S-04"
+      ],
+      "tone": "neutral"
+    }
+  ],
+  "plans": [
+    {
+      "id": "PLAN-A",
+      "code": "A",
+      "name": "方案 A：即食化年轻化",
+      "shortName": "即食年轻化",
+      "positioning": "把阿胶从“传统滋补”翻译成“现代即食养生”。",
+      "audience": "25-40 岁年轻女性、都市白领、新中式养生人群",
+      "platforms": [
+        "小红书",
+        "抖音",
+        "天猫",
+        "私域"
+      ],
+      "formats": [
+        "内容种草",
+        "搜索承接",
+        "私域/渠道承接"
+      ],
+      "timing": "秋季滋补季前两周启动，覆盖中秋送礼前的自用与送礼需求",
+      "coreMessage": "像零食一样方便，但保留老字号的讲究。",
+      "rationale": "即食化是降低尝试门槛的最短路径，年轻用户需要口感、方便和合规功效说明。",
+      "constraints": [
+        "功效表达必须合规",
+        "不能暗示治疗作用",
+        "口感与价格需真实匹配"
+      ],
+      "uncertainties": [
+        "年轻用户复购意愿",
+        "即食产品与传统阿胶的品牌冲突",
+        "竞品零食化速度"
+      ],
+      "channels": [
+        {
+          "channel": "小红书",
+          "role": "即食养生与口感内容",
+          "budgetCents": 17500000
+        },
+        {
+          "channel": "抖音",
+          "role": "场景短视频与达人",
+          "budgetCents": 15000000
+        },
+        {
+          "channel": "天猫",
+          "role": "即食货架与评价",
+          "budgetCents": 12500000
+        },
+        {
+          "channel": "私域",
+          "role": "复购与周期装",
+          "budgetCents": 5000000
+        }
+      ],
+      "evidenceThemeIds": [
+        "TH-01",
+        "TH-02"
+      ],
+      "updatedAt": "2026-08-30T11:00:00+08:00"
+    },
+    {
+      "id": "PLAN-B",
+      "code": "B",
+      "name": "方案 B：礼品与私域",
+      "shortName": "礼品私域",
+      "positioning": "用礼品场景和私域周期装，做高客单与复购。",
+      "audience": "企业礼品采购、节日送礼人群、私域老客",
+      "platforms": [
+        "私域",
+        "京东",
+        "视频号",
+        "礼品渠道"
+      ],
+      "formats": [
+        "内容种草",
+        "搜索承接",
+        "私域/渠道承接"
+      ],
+      "timing": "中秋/国庆礼品季，私域提前一个月预热",
+      "coreMessage": "送得体的同时，也把滋补做成可以坚持的习惯。",
+      "rationale": "礼品客单价高，私域复购稳定，但年轻用户拉新弱于即食内容。",
+      "constraints": [
+        "礼品履约与发票能力",
+        "功效表达合规",
+        "私域触达频率"
+      ],
+      "uncertainties": [
+        "企业采购预算",
+        "节日礼品竞争",
+        "私域用户活跃度"
+      ],
+      "channels": [
+        {
+          "channel": "私域",
+          "role": "周期装与复购",
+          "budgetCents": 15000000
+        },
+        {
+          "channel": "京东",
+          "role": "礼品货架与评价",
+          "budgetCents": 15000000
+        },
+        {
+          "channel": "视频号",
+          "role": "品牌与工艺内容",
+          "budgetCents": 10000000
+        },
+        {
+          "channel": "礼品渠道",
+          "role": "企业采购与定制",
+          "budgetCents": 10000000
+        }
+      ],
+      "evidenceThemeIds": [
+        "TH-01",
+        "TH-03"
+      ],
+      "updatedAt": "2026-08-30T11:00:00+08:00"
+    }
+  ],
+  "approvals": [
+    {
+      "id": "APR-01",
+      "planId": "PLAN-A",
+      "planCode": "A",
+      "approvedAt": "2026-08-31T17:00:00+08:00",
+      "reason": "模拟审批：方案预算、证据引用和风险约束已核对；所有效果均为模拟假设，执行前需企业真实复核。",
+      "plan": {
+        "id": "PLAN-A",
+        "code": "A",
+        "name": "方案 A：即食化年轻化",
+        "shortName": "即食年轻化",
+        "positioning": "把阿胶从“传统滋补”翻译成“现代即食养生”。",
+        "audience": "25-40 岁年轻女性、都市白领、新中式养生人群",
+        "platforms": [
+          "小红书",
+          "抖音",
+          "天猫",
+          "私域"
+        ],
+        "formats": [
+          "内容种草",
+          "搜索承接",
+          "私域/渠道承接"
+        ],
+        "timing": "秋季滋补季前两周启动，覆盖中秋送礼前的自用与送礼需求",
+        "coreMessage": "像零食一样方便，但保留老字号的讲究。",
+        "rationale": "即食化是降低尝试门槛的最短路径，年轻用户需要口感、方便和合规功效说明。",
+        "constraints": [
+          "功效表达必须合规",
+          "不能暗示治疗作用",
+          "口感与价格需真实匹配"
+        ],
+        "uncertainties": [
+          "年轻用户复购意愿",
+          "即食产品与传统阿胶的品牌冲突",
+          "竞品零食化速度"
+        ],
+        "channels": [
+          {
+            "channel": "小红书",
+            "role": "即食养生与口感内容",
+            "budgetCents": 17500000
+          },
+          {
+            "channel": "抖音",
+            "role": "场景短视频与达人",
+            "budgetCents": 15000000
+          },
+          {
+            "channel": "天猫",
+            "role": "即食货架与评价",
+            "budgetCents": 12500000
+          },
+          {
+            "channel": "私域",
+            "role": "复购与周期装",
+            "budgetCents": 5000000
+          }
+        ],
+        "evidenceThemeIds": [
+          "TH-01",
+          "TH-02"
+        ],
+        "updatedAt": "2026-08-30T11:00:00+08:00"
+      },
+      "companyBudgetCents": 50000000,
+      "fingerprint": "fp_5a0fdf7e",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-02",
+        "S-03",
+        "S-05",
+        "S-07",
+        "S-09",
+        "S-10"
+      ],
+      "evidence": [
+        {
+          "id": "S-01",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"即食化/便携是年轻用户尝试的第一理由\",\"年轻用户愿意尝试即食、便携、口感友好的滋补产品，但不愿处理传统阿胶块的复杂做法。\",\"“阿胶块我不会熬，即食的可以当零食试试。”\",\"SRC-01\",\"即食化是降低尝试门槛的关键。\"]"
+        },
+        {
+          "id": "S-02",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"功效表达必须合规，用户也在找证据\",\"消费者关注功效，但对夸大宣传警惕，愿意看成分、工艺和真实体验。\",\"“别说包治百病，告诉我适合什么人群、怎么吃就行。”\",\"SRC-05\",\"功效表达必须合规、可验证。\"]"
+        },
+        {
+          "id": "S-03",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"口感与甜度影响复购\",\"即食产品的口感、甜度和腻感直接影响复购。\",\"“太甜了吃一次就不想再买，口感很重要。”\",\"SRC-01\",\"口感是即食化的第二道门槛。\"]"
+        },
+        {
+          "id": "S-05",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"送礼场景看重品牌与包装，自用看重方便\",\"送礼用户看重品牌、包装和体面；自用用户更关心方便、口感和价格。\",\"“送长辈要看起来正式，自己吃越方便越好。”\",\"SRC-02\",\"礼品与自用需要分开沟通。\"]"
+        },
+        {
+          "id": "S-07",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"竞品用零食化产品切年轻市场\",\"竞品用即食、零食化、便携包装吸引年轻用户，降低传统滋补的距离感。\",\"“现在很多即食的，像零食一样，方便带。”\",\"SRC-06\",\"零食化是竞争方向，但需保持功效信任。\"]"
+        },
+        {
+          "id": "S-09",
+          "priority": "high",
+          "status": "pending",
+          "relevance": 5,
+          "content": "[\"电商评价里“是否上火/适合人群”被反复询问\",\"用户对适合人群、体质和食用禁忌有疑问，需要清晰说明。\",\"“我这种体质能不能吃？会不会上火？”\",\"SRC-03\",\"需要把适用人群和禁忌讲清楚。\"]"
+        },
+        {
+          "id": "S-10",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"用户对阿胶功效的信任来自长期品牌而非单次广告\",\"消费者更信任老字号品牌和长期口碑，单次广告难以建立功效信任。\",\"“老品牌肯定更信，但广告说效果多好我不太信。”\",\"SRC-08\",\"品牌信任是资产，但不能替代合规证据。\"]"
+        }
+      ],
+      "note": "审批快照保存方案、预算上限与关键证据状态；任一项变化需重新确认。"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "REV-01",
+      "approvalId": "APR-01",
+      "planId": "PLAN-A",
+      "dataKind": "simulated",
+      "note": "模拟复盘：渠道数据为假设值，不对应真实广告账户或真实订单。",
+      "observations": "即食化内容带来年轻用户互动和尝试，但复购低于预期；礼品方案客单价更高，但决策周期长。功效合规说明和适用人群问题在咨询中反复出现。",
+      "possibleReasons": "即食化降低了尝试门槛，但口感、价格和功效信任仍需时间；礼品渠道依赖企业采购节奏，短期转化慢。",
+      "unconfirmed": "真实复购率、不同体质人群反馈、企业礼品预算和私域留存仍未确认。",
+      "updatedAt": "2026-10-02T15:00:00+08:00",
+      "channels": [
+        {
+          "channel": "小红书",
+          "actualSpendCents": 17500000,
+          "impressions": 3500000,
+          "clicks": 105000,
+          "leads": 540
+        },
+        {
+          "channel": "抖音",
+          "actualSpendCents": 15000000,
+          "impressions": 4200000,
+          "clicks": 126000,
+          "leads": 480
+        },
+        {
+          "channel": "天猫",
+          "actualSpendCents": 12500000,
+          "impressions": 1800000,
+          "clicks": 54000,
+          "leads": 390
+        },
+        {
+          "channel": "私域",
+          "actualSpendCents": 5000000,
+          "impressions": 220000,
+          "clicks": 11000,
+          "leads": 140
+        }
+      ],
+      "suggestions": [
+        {
+          "id": "SUG-01",
+          "title": "把适用人群/禁忌做成标准问答",
+          "detail": "减少咨询中的重复问题，降低合规风险。",
+          "linkedSignalIds": [
+            "S-02",
+            "S-09",
+            "S-10"
+          ]
+        },
+        {
+          "id": "SUG-02",
+          "title": "即食产品做小规格试吃",
+          "detail": "降低第一次尝试价格门槛，再引导复购。",
+          "linkedSignalIds": [
+            "S-01",
+            "S-03",
+            "S-04"
+          ]
+        },
+        {
+          "id": "SUG-03",
+          "title": "礼品渠道单独做履约清单",
+          "detail": "明确发票、定制、交付和售后。",
+          "linkedSignalIds": [
+            "S-05",
+            "S-02"
+          ]
+        }
+      ]
+    }
+  ],
+  "feedbackTasks": [
+    {
+      "id": "FT-01",
+      "title": "把适用人群/禁忌做成标准问答",
+      "detail": "减少咨询中的重复问题，降低合规风险。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-10-03T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-02",
+        "S-09",
+        "S-10"
+      ],
+      "source": "review"
+    },
+    {
+      "id": "FT-02",
+      "title": "即食产品做小规格试吃",
+      "detail": "降低第一次尝试价格门槛，再引导复购。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-10-04T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-01",
+        "S-03",
+        "S-04"
+      ],
+      "source": "review"
+    },
+    {
+      "id": "FT-03",
+      "title": "礼品渠道单独做履约清单",
+      "detail": "明确发票、定制、交付和售后。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-10-05T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-05",
+        "S-02"
+      ],
+      "source": "review"
+    }
+  ],
+  "decision": {
+    "status": "approved",
+    "planId": "PLAN-A",
+    "updatedAt": "2026-08-31T18:00:00+08:00"
+  },
+  "activePlanId": "PLAN-A"
+}

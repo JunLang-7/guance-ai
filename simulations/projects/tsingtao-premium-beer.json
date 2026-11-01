@@ -1,0 +1,801 @@
+{
+  "schemaVersion": 4,
+  "mode": "demo",
+  "company": {
+    "id": "C-TSINGTAO-PREMIUM-BEER",
+    "name": "青岛啤酒股份有限公司",
+    "brand": "青岛啤酒",
+    "industry": "啤酒与高端饮品",
+    "region": "山东 · 青岛",
+    "stage": "全国化成熟品牌，青岛上市公司",
+    "product": "高端啤酒组合（模拟：白啤、原浆、百年之旅等高端线）",
+    "productSpec": "高端线组合，具体产品、价格与渠道政策以企业实际执行为准",
+    "goal": "提升高端啤酒在山东及华东餐饮、夜经济和电商礼盒场景的尝鲜与复购",
+    "budgetCents": 80000000,
+    "campaignStart": "2026-05-15",
+    "campaignEnd": "2026-06-15",
+    "updatedAt": "2026-05-05T10:00:00+08:00"
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "name": "小红书啤酒/佐餐笔记摘录（模拟）",
+      "platform": "小红书",
+      "kind": "consumer",
+      "publishedAt": "2026-04-30",
+      "note": "模拟笔记摘录，不对应真实账号或真实互动量。",
+      "simulated": true,
+      "collectedAt": "2026-05-01T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-02",
+      "name": "抖音美食与夜宵短视频评论（模拟）",
+      "platform": "抖音",
+      "kind": "consumer",
+      "publishedAt": "2026-05-01",
+      "note": "模拟评论集合，用于观察餐饮场景语言。",
+      "simulated": true,
+      "collectedAt": "2026-05-02T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-03",
+      "name": "美团/大众点评餐饮评价摘要（模拟）",
+      "platform": "美团/点评",
+      "kind": "consumer",
+      "publishedAt": "2026-05-02",
+      "note": "模拟餐饮评价摘要，不对应真实门店。",
+      "simulated": true,
+      "collectedAt": "2026-05-03T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-04",
+      "name": "天猫/京东啤酒礼盒评价摘要（模拟）",
+      "platform": "电商平台",
+      "kind": "consumer",
+      "publishedAt": "2026-05-03",
+      "note": "模拟电商评价摘要，不对应真实订单。",
+      "simulated": true,
+      "collectedAt": "2026-05-04T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-05",
+      "name": "啤酒行业观察（模拟）",
+      "platform": "行业媒体",
+      "kind": "industry",
+      "publishedAt": "2026-05-04",
+      "note": "虚构行业观察，仅用于模拟高端化与夜经济背景。",
+      "simulated": true,
+      "collectedAt": "2026-05-05T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-06",
+      "name": "竞品餐饮促销动态（模拟）",
+      "platform": "行业媒体",
+      "kind": "competitor",
+      "publishedAt": "2026-05-05",
+      "note": "竞品名称、套餐与价格均为模拟。",
+      "simulated": true,
+      "collectedAt": "2026-05-06T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-07",
+      "name": "青岛餐饮终端走访纪要（模拟）",
+      "platform": "线下走访",
+      "kind": "industry",
+      "publishedAt": "2026-05-06",
+      "note": "模拟餐饮终端访谈，未进行真实商户访谈。",
+      "simulated": true,
+      "collectedAt": "2026-05-07T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-08",
+      "name": "消费者问卷 n=120（模拟）",
+      "platform": "问卷",
+      "kind": "consumer",
+      "publishedAt": "2026-05-07",
+      "note": "虚构问卷样本，仅作方向性参考。",
+      "simulated": true,
+      "collectedAt": "2026-05-08T10:00:00+08:00",
+      "origin": "demo"
+    }
+  ],
+  "signals": [
+    {
+      "id": "S-01",
+      "title": "高端啤酒的“第一口体验”比参数更重要",
+      "summary": "消费者更愿意为香气、泡沫、口感和搭配体验付费，单纯讲原料参数难以形成记忆。",
+      "quote": "“说那么多工艺没用，第一口顺不顺、配海鲜香不香才重要。”",
+      "sourceId": "SRC-01",
+      "platform": "小红书",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "高端线内容要先把“好喝”讲清楚。",
+      "tags": [
+        "口感",
+        "体验",
+        "高端"
+      ],
+      "capturedAt": "2026-05-07T09:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-05-09T16:00:00+08:00"
+    },
+    {
+      "id": "S-02",
+      "title": "餐饮场景决定高端啤酒的复购",
+      "summary": "高端啤酒的第一次尝试常发生在餐饮，餐饮老板的推荐和套餐设计影响复购。",
+      "quote": "“店里推什么客人就点什么，套餐里带一杯更容易试。”",
+      "sourceId": "SRC-03",
+      "platform": "美团/点评",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "餐饮终端是高端化的关键阵地。",
+      "tags": [
+        "餐饮",
+        "复购",
+        "套餐"
+      ],
+      "capturedAt": "2026-05-07T10:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-05-09T16:00:00+08:00"
+    },
+    {
+      "id": "S-03",
+      "title": "低醇/果味吸引年轻人，但老客担心不像啤酒",
+      "summary": "年轻用户对低醇、果味接受度高，但核心啤酒用户担心口味偏离。",
+      "quote": "“果味可以试试，但喝起来不像啤酒就没意思了。”",
+      "sourceId": "SRC-01",
+      "platform": "小红书",
+      "category": "consumer",
+      "priority": "medium",
+      "status": "disputed",
+      "relevance": 4,
+      "impact": "低醇/果味可作为拉新入口，但不能替代核心产品。",
+      "tags": [
+        "低醇",
+        "果味",
+        "年轻化"
+      ],
+      "capturedAt": "2026-05-07T11:00:00+08:00",
+      "note": "待核实：模拟材料，未获得原始证据；不得直接用于对外发布。"
+    },
+    {
+      "id": "S-04",
+      "title": "夜经济与烧烤/海鲜场景强关联",
+      "summary": "夏季夜宵、烧烤、海鲜是高端啤酒的高频场景，内容更容易激发即时消费。",
+      "quote": "“夏天吃烧烤，肯定想点个好一点的啤酒。”",
+      "sourceId": "SRC-02",
+      "platform": "抖音",
+      "category": "industry",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "夜经济场景适合短视频和同城投放。",
+      "tags": [
+        "夜经济",
+        "烧烤",
+        "海鲜"
+      ],
+      "capturedAt": "2026-05-08T12:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-05-09T16:00:00+08:00"
+    },
+    {
+      "id": "S-05",
+      "title": "竞品用套餐和开瓶礼抢占餐饮终端",
+      "summary": "竞品通过套餐、开瓶礼、陈列奖励提高终端推荐率。",
+      "quote": "“竞品给的开瓶费更高，服务员当然更愿意推。”",
+      "sourceId": "SRC-06",
+      "platform": "行业媒体",
+      "category": "competitor",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "餐饮终端竞争不只是品牌力，还有渠道政策。",
+      "tags": [
+        "竞品",
+        "餐饮",
+        "渠道"
+      ],
+      "capturedAt": "2026-05-08T13:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-05-09T16:00:00+08:00"
+    },
+    {
+      "id": "S-06",
+      "title": "电商礼盒更看重包装与到货时效",
+      "summary": "礼盒消费更关注体面、到货时间和破损保障，价格不是唯一因素。",
+      "quote": "“送人一定要包装好看，而且得准时到。”",
+      "sourceId": "SRC-04",
+      "platform": "电商平台",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "电商礼盒需要强化包装与履约。",
+      "tags": [
+        "礼盒",
+        "包装",
+        "时效"
+      ],
+      "capturedAt": "2026-05-08T14:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-05-09T16:00:00+08:00"
+    },
+    {
+      "id": "S-07",
+      "title": "青岛啤酒品牌信任度高，但高端线认知不足",
+      "summary": "消费者信任青岛啤酒主品牌，但对高端子系列的具体差异了解有限。",
+      "quote": "“青岛啤酒肯定知道，但这么多高端系列有什么区别？”",
+      "sourceId": "SRC-08",
+      "platform": "问卷",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "高端线需要清楚的系列分层。",
+      "tags": [
+        "品牌",
+        "高端线",
+        "认知"
+      ],
+      "capturedAt": "2026-05-09T09:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-05-09T16:00:00+08:00"
+    },
+    {
+      "id": "S-08",
+      "title": "餐饮老板更关心毛利和退换政策",
+      "summary": "餐饮终端关心进货毛利、退换货和临期处理，而不是品牌广告。",
+      "quote": "“卖不动能不能换？临期怎么处理？这比广告重要。”",
+      "sourceId": "SRC-07",
+      "platform": "线下走访",
+      "category": "industry",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "餐饮渠道政策要算清终端账。",
+      "tags": [
+        "餐饮",
+        "毛利",
+        "退换"
+      ],
+      "capturedAt": "2026-05-09T10:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-05-09T16:00:00+08:00"
+    },
+    {
+      "id": "S-09",
+      "title": "夏季体育赛事是场景化内容窗口",
+      "summary": "赛事观看、聚餐和夜宵场景能为高端啤酒提供自然的内容入口。",
+      "quote": "“看球的时候开一瓶好点的，氛围感更强。”",
+      "sourceId": "SRC-05",
+      "platform": "行业媒体",
+      "category": "industry",
+      "priority": "medium",
+      "status": "verified",
+      "relevance": 4,
+      "impact": "赛事场景适合做内容联动。",
+      "tags": [
+        "赛事",
+        "场景",
+        "夏季"
+      ],
+      "capturedAt": "2026-05-09T11:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-05-09T16:00:00+08:00"
+    },
+    {
+      "id": "S-10",
+      "title": "本地文旅带来外地游客尝鲜",
+      "summary": "青岛文旅热度带来游客尝鲜需求，景区和餐饮是自然触点。",
+      "quote": "“来青岛肯定要喝本地啤酒，愿意试试高端款。”",
+      "sourceId": "SRC-05",
+      "platform": "行业媒体",
+      "category": "industry",
+      "priority": "medium",
+      "status": "verified",
+      "relevance": 4,
+      "impact": "文旅场景适合做地域限定内容。",
+      "tags": [
+        "文旅",
+        "游客",
+        "尝鲜"
+      ],
+      "capturedAt": "2026-05-10T12:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-05-09T16:00:00+08:00"
+    }
+  ],
+  "themes": [
+    {
+      "id": "TH-01",
+      "rank": 1,
+      "title": "高端化不是涨价，是场景升级",
+      "summary": "高端啤酒的增长来自餐饮、夜宵、礼盒和文旅场景的体验升级，而不是单纯提价。",
+      "mentionCount": 6,
+      "direction": "用场景化内容解释“为什么值得多花几块钱”。",
+      "confidence": "high",
+      "claimType": "观测事实",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-02",
+        "S-04",
+        "S-06",
+        "S-09",
+        "S-10"
+      ],
+      "opportunity": "围绕夜宵、海鲜、赛事和礼盒做场景组合。",
+      "caveat": "场景内容容易同质化，需要真实终端配合。"
+    },
+    {
+      "id": "TH-02",
+      "rank": 2,
+      "title": "餐饮终端是高端啤酒的决胜场",
+      "summary": "餐饮老板的推荐、套餐设计和渠道政策直接影响高端啤酒的第一次尝试。",
+      "mentionCount": 3,
+      "direction": "把终端利润、退换和陈列做成可执行的合作方案。",
+      "confidence": "high",
+      "claimType": "分析推断",
+      "evidenceSignalIds": [
+        "S-02",
+        "S-05",
+        "S-08"
+      ],
+      "opportunity": "先用餐饮套餐和开瓶礼建立尝试，再用内容承接复购。",
+      "caveat": "终端政策可能引发价格混乱，需要控制。"
+    },
+    {
+      "id": "TH-03",
+      "rank": 3,
+      "title": "低醇/果味是拉新入口，但需保护品牌核心",
+      "summary": "年轻用户对低醇/果味有兴趣，但核心用户担心品牌偏离啤酒本质。",
+      "mentionCount": 3,
+      "direction": "把低醇/果味作为独立系列沟通，不混淆主品牌。",
+      "confidence": "medium",
+      "claimType": "分析推断",
+      "evidenceSignalIds": [
+        "S-03",
+        "S-01",
+        "S-07"
+      ],
+      "opportunity": "用独立产品线和明确场景承接年轻用户。",
+      "caveat": "产品线过多可能稀释品牌认知。"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "OP-01",
+      "title": "夜宵/海鲜场景套餐",
+      "fact": "夜经济和烧烤海鲜是高端啤酒的高频场景。",
+      "opportunity": "与餐饮终端共创套餐，用短视频和同城内容引流。",
+      "verify": "需要真实门店合作与终端政策。",
+      "evidenceSignalIds": [
+        "S-02",
+        "S-04",
+        "S-05",
+        "S-08",
+        "S-09"
+      ],
+      "tone": "positive"
+    },
+    {
+      "id": "OP-02",
+      "title": "高端线系列分层内容",
+      "fact": "消费者对高端子系列差异认知不足。",
+      "opportunity": "用“口味/场景/价格”三轴做系列说明。",
+      "verify": "需核对真实产品线与价格。",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-07",
+        "S-10"
+      ],
+      "tone": "positive"
+    },
+    {
+      "id": "OP-03",
+      "title": "文旅限定与礼盒",
+      "fact": "青岛文旅带来游客尝鲜，礼盒需要体面与时效。",
+      "opportunity": "做地域限定包装和礼盒履约保障。",
+      "verify": "需确认包装合规与物流破损责任。",
+      "evidenceSignalIds": [
+        "S-06",
+        "S-10",
+        "S-09"
+      ],
+      "tone": "neutral"
+    }
+  ],
+  "plans": [
+    {
+      "id": "PLAN-A",
+      "code": "A",
+      "name": "方案 A：夜经济餐饮场景",
+      "shortName": "夜经济餐饮",
+      "positioning": "把高端啤酒放进夜宵、烧烤、海鲜的真实场景里。",
+      "audience": "山东及华东夜宵餐饮消费者、餐饮终端",
+      "platforms": [
+        "抖音",
+        "美团/点评",
+        "餐饮终端",
+        "小红书"
+      ],
+      "formats": [
+        "内容种草",
+        "搜索承接",
+        "私域/渠道承接"
+      ],
+      "timing": "夏季夜经济启动期，餐饮终端提前两周铺货",
+      "coreMessage": "好啤酒配好夜宵，先试一杯，再决定囤不囤。",
+      "rationale": "餐饮是高端啤酒第一次尝试的核心场景，短视频和同城投放能放大即时消费。",
+      "constraints": [
+        "终端政策不能引发价格混乱",
+        "内容不能承诺未覆盖门店",
+        "未成年人不得触达"
+      ],
+      "uncertainties": [
+        "餐饮终端执行一致性",
+        "天气对夜宵客流影响",
+        "竞品开瓶礼力度"
+      ],
+      "channels": [
+        {
+          "channel": "抖音",
+          "role": "夜宵场景短视频与同城",
+          "budgetCents": 24000000
+        },
+        {
+          "channel": "美团/点评",
+          "role": "餐饮套餐与到店",
+          "budgetCents": 24000000
+        },
+        {
+          "channel": "餐饮终端",
+          "role": "套餐、陈列与开瓶礼",
+          "budgetCents": 24000000
+        },
+        {
+          "channel": "小红书",
+          "role": "佐餐内容与口碑",
+          "budgetCents": 8000000
+        }
+      ],
+      "evidenceThemeIds": [
+        "TH-01",
+        "TH-02"
+      ],
+      "updatedAt": "2026-05-13T11:00:00+08:00"
+    },
+    {
+      "id": "PLAN-B",
+      "code": "B",
+      "name": "方案 B：电商礼盒与文旅",
+      "shortName": "礼盒与文旅",
+      "positioning": "用礼盒和城市文旅做高端线的体面表达。",
+      "audience": "送礼人群、外地游客、电商礼盒消费者",
+      "platforms": [
+        "小红书",
+        "天猫/京东",
+        "视频号",
+        "文旅门店"
+      ],
+      "formats": [
+        "内容种草",
+        "搜索承接",
+        "私域/渠道承接"
+      ],
+      "timing": "端午/暑期前，文旅与礼盒同步预热",
+      "coreMessage": "把青岛的味道带回家，体面、准时、有故事。",
+      "rationale": "礼盒和文旅能提升高端线的品牌感，但复购弱于餐饮场景。",
+      "constraints": [
+        "礼盒履约与破损责任",
+        "文旅合作授权",
+        "价格体系统一"
+      ],
+      "uncertainties": [
+        "游客消费意愿",
+        "物流时效",
+        "礼盒季节性强"
+      ],
+      "channels": [
+        {
+          "channel": "小红书",
+          "role": "礼盒与文旅内容",
+          "budgetCents": 20000000
+        },
+        {
+          "channel": "天猫/京东",
+          "role": "礼盒货架与评价",
+          "budgetCents": 28000000
+        },
+        {
+          "channel": "视频号",
+          "role": "品牌故事与工艺",
+          "budgetCents": 16000000
+        },
+        {
+          "channel": "文旅门店",
+          "role": "游客触达与体验",
+          "budgetCents": 16000000
+        }
+      ],
+      "evidenceThemeIds": [
+        "TH-01",
+        "TH-03"
+      ],
+      "updatedAt": "2026-05-13T11:00:00+08:00"
+    }
+  ],
+  "approvals": [
+    {
+      "id": "APR-01",
+      "planId": "PLAN-A",
+      "planCode": "A",
+      "approvedAt": "2026-05-14T17:00:00+08:00",
+      "reason": "模拟审批：方案预算、证据引用和风险约束已核对；所有效果均为模拟假设，执行前需企业真实复核。",
+      "plan": {
+        "id": "PLAN-A",
+        "code": "A",
+        "name": "方案 A：夜经济餐饮场景",
+        "shortName": "夜经济餐饮",
+        "positioning": "把高端啤酒放进夜宵、烧烤、海鲜的真实场景里。",
+        "audience": "山东及华东夜宵餐饮消费者、餐饮终端",
+        "platforms": [
+          "抖音",
+          "美团/点评",
+          "餐饮终端",
+          "小红书"
+        ],
+        "formats": [
+          "内容种草",
+          "搜索承接",
+          "私域/渠道承接"
+        ],
+        "timing": "夏季夜经济启动期，餐饮终端提前两周铺货",
+        "coreMessage": "好啤酒配好夜宵，先试一杯，再决定囤不囤。",
+        "rationale": "餐饮是高端啤酒第一次尝试的核心场景，短视频和同城投放能放大即时消费。",
+        "constraints": [
+          "终端政策不能引发价格混乱",
+          "内容不能承诺未覆盖门店",
+          "未成年人不得触达"
+        ],
+        "uncertainties": [
+          "餐饮终端执行一致性",
+          "天气对夜宵客流影响",
+          "竞品开瓶礼力度"
+        ],
+        "channels": [
+          {
+            "channel": "抖音",
+            "role": "夜宵场景短视频与同城",
+            "budgetCents": 24000000
+          },
+          {
+            "channel": "美团/点评",
+            "role": "餐饮套餐与到店",
+            "budgetCents": 24000000
+          },
+          {
+            "channel": "餐饮终端",
+            "role": "套餐、陈列与开瓶礼",
+            "budgetCents": 24000000
+          },
+          {
+            "channel": "小红书",
+            "role": "佐餐内容与口碑",
+            "budgetCents": 8000000
+          }
+        ],
+        "evidenceThemeIds": [
+          "TH-01",
+          "TH-02"
+        ],
+        "updatedAt": "2026-05-13T11:00:00+08:00"
+      },
+      "companyBudgetCents": 80000000,
+      "fingerprint": "fp_bfd75ae1",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-02",
+        "S-04",
+        "S-05",
+        "S-06",
+        "S-08",
+        "S-09",
+        "S-10"
+      ],
+      "evidence": [
+        {
+          "id": "S-01",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"高端啤酒的“第一口体验”比参数更重要\",\"消费者更愿意为香气、泡沫、口感和搭配体验付费，单纯讲原料参数难以形成记忆。\",\"“说那么多工艺没用，第一口顺不顺、配海鲜香不香才重要。”\",\"SRC-01\",\"高端线内容要先把“好喝”讲清楚。\"]"
+        },
+        {
+          "id": "S-02",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"餐饮场景决定高端啤酒的复购\",\"高端啤酒的第一次尝试常发生在餐饮，餐饮老板的推荐和套餐设计影响复购。\",\"“店里推什么客人就点什么，套餐里带一杯更容易试。”\",\"SRC-03\",\"餐饮终端是高端化的关键阵地。\"]"
+        },
+        {
+          "id": "S-04",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"夜经济与烧烤/海鲜场景强关联\",\"夏季夜宵、烧烤、海鲜是高端啤酒的高频场景，内容更容易激发即时消费。\",\"“夏天吃烧烤，肯定想点个好一点的啤酒。”\",\"SRC-02\",\"夜经济场景适合短视频和同城投放。\"]"
+        },
+        {
+          "id": "S-05",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"竞品用套餐和开瓶礼抢占餐饮终端\",\"竞品通过套餐、开瓶礼、陈列奖励提高终端推荐率。\",\"“竞品给的开瓶费更高，服务员当然更愿意推。”\",\"SRC-06\",\"餐饮终端竞争不只是品牌力，还有渠道政策。\"]"
+        },
+        {
+          "id": "S-06",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"电商礼盒更看重包装与到货时效\",\"礼盒消费更关注体面、到货时间和破损保障，价格不是唯一因素。\",\"“送人一定要包装好看，而且得准时到。”\",\"SRC-04\",\"电商礼盒需要强化包装与履约。\"]"
+        },
+        {
+          "id": "S-08",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"餐饮老板更关心毛利和退换政策\",\"餐饮终端关心进货毛利、退换货和临期处理，而不是品牌广告。\",\"“卖不动能不能换？临期怎么处理？这比广告重要。”\",\"SRC-07\",\"餐饮渠道政策要算清终端账。\"]"
+        },
+        {
+          "id": "S-09",
+          "priority": "medium",
+          "status": "verified",
+          "relevance": 4,
+          "content": "[\"夏季体育赛事是场景化内容窗口\",\"赛事观看、聚餐和夜宵场景能为高端啤酒提供自然的内容入口。\",\"“看球的时候开一瓶好点的，氛围感更强。”\",\"SRC-05\",\"赛事场景适合做内容联动。\"]"
+        },
+        {
+          "id": "S-10",
+          "priority": "medium",
+          "status": "verified",
+          "relevance": 4,
+          "content": "[\"本地文旅带来外地游客尝鲜\",\"青岛文旅热度带来游客尝鲜需求，景区和餐饮是自然触点。\",\"“来青岛肯定要喝本地啤酒，愿意试试高端款。”\",\"SRC-05\",\"文旅场景适合做地域限定内容。\"]"
+        }
+      ],
+      "note": "审批快照保存方案、预算上限与关键证据状态；任一项变化需重新确认。"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "REV-01",
+      "approvalId": "APR-01",
+      "planId": "PLAN-A",
+      "dataKind": "simulated",
+      "note": "模拟复盘：渠道数据为假设值，不对应真实广告账户或真实订单。",
+      "observations": "夜经济餐饮方案带来明显咨询与到店，但餐饮终端执行差异大；礼盒内容互动高、转化弱。高端线的系列差异仍是咨询中的高频问题。",
+      "possibleReasons": "夜宵场景与夏季消费自然契合；餐饮套餐降低了尝试门槛；但终端政策、服务员推荐和礼盒履约影响了最终转化。",
+      "unconfirmed": "真实开瓶率、复购率、不同城市餐饮终端差异和礼盒退货率仍未确认。",
+      "updatedAt": "2026-06-17T15:00:00+08:00",
+      "channels": [
+        {
+          "channel": "抖音",
+          "actualSpendCents": 24000000,
+          "impressions": 5600000,
+          "clicks": 168000,
+          "leads": 2900
+        },
+        {
+          "channel": "美团/点评",
+          "actualSpendCents": 24000000,
+          "impressions": 2400000,
+          "clicks": 96000,
+          "leads": 3100
+        },
+        {
+          "channel": "餐饮终端",
+          "actualSpendCents": 24000000,
+          "impressions": 1200000,
+          "clicks": 30000,
+          "leads": 1700
+        },
+        {
+          "channel": "小红书",
+          "actualSpendCents": 8000000,
+          "impressions": 1600000,
+          "clicks": 48000,
+          "leads": 640
+        }
+      ],
+      "suggestions": [
+        {
+          "id": "SUG-01",
+          "title": "把高端线差异做成一张图",
+          "detail": "在餐饮、电商和内容端统一使用系列/口味/场景说明。",
+          "linkedSignalIds": [
+            "S-07",
+            "S-01",
+            "S-09"
+          ]
+        },
+        {
+          "id": "SUG-02",
+          "title": "餐饮终端做样板店",
+          "detail": "先做少量样板店，验证套餐、陈列和服务话术。",
+          "linkedSignalIds": [
+            "S-02",
+            "S-05",
+            "S-08"
+          ]
+        },
+        {
+          "id": "SUG-03",
+          "title": "礼盒履约单独复盘",
+          "detail": "记录破损、时效和退货原因，再决定是否扩大礼盒投放。",
+          "linkedSignalIds": [
+            "S-06",
+            "S-10"
+          ]
+        }
+      ]
+    }
+  ],
+  "feedbackTasks": [
+    {
+      "id": "FT-01",
+      "title": "把高端线差异做成一张图",
+      "detail": "在餐饮、电商和内容端统一使用系列/口味/场景说明。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-06-18T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-07",
+        "S-01",
+        "S-09"
+      ],
+      "source": "review"
+    },
+    {
+      "id": "FT-02",
+      "title": "餐饮终端做样板店",
+      "detail": "先做少量样板店，验证套餐、陈列和服务话术。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-06-19T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-02",
+        "S-05",
+        "S-08"
+      ],
+      "source": "review"
+    },
+    {
+      "id": "FT-03",
+      "title": "礼盒履约单独复盘",
+      "detail": "记录破损、时效和退货原因，再决定是否扩大礼盒投放。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-06-20T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-06",
+        "S-10"
+      ],
+      "source": "review"
+    }
+  ],
+  "decision": {
+    "status": "approved",
+    "planId": "PLAN-A",
+    "updatedAt": "2026-05-14T18:00:00+08:00"
+  },
+  "activePlanId": "PLAN-A"
+}

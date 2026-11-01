@@ -59,6 +59,18 @@ Web操作回归：启动预览，设置BASE_URL后运行`npm run ui:verify`和`n
 
 应用保存的是“待核实情报”，会尽量保留原文链接、标题和正文。粘贴模式不会登录平台账号；登录窗口由你手动扫码/登录，应用不读取密码或导出 Cookie。遇到微信安全验证时，可复制全文后用“抖音/小红书文案”保存，或打开登录窗口采集当前文章。
 
+
+## 山东企业模拟案例（5 家）
+
+`simulations/` 包含海尔智家、青岛啤酒、潍柴动力、东阿阿胶、乖宝宠物 5 家山东企业的模拟营销决策案例，覆盖智能家电、啤酒、商用车动力、滋补健康、宠物食品五个行业。每个案例包含至少一万字的过程性报告、图表、信号 CSV 和可导入的项目 JSON。桌面端可在设置→模拟案例库一键导入。
+
+- [案例包说明](simulations/README.md)
+- [方法与可信度](simulations/methodology.md)
+- [可信度对比](simulations/credibility-summary.md)
+- [迭代记录](simulations/iteration-log.md)
+
+所有消费者语句、竞品观察、渠道数据、复盘结果和“企业满意度”均为模拟，不代表企业真实意见或真实经营数据。
+
 ## 设置怎么填（可选）
 
 - **普通用户请忽略官方平台凭据**：用“市场情报→添加情报”即可，不需要 AppID/AppSecret。官方企业接口仍待开通；AppID/AppSecret 是开放平台应用的凭据，**不是账号密码**，只给公司开发人员或服务商使用，保存后也不会自动登录或启用采集。
@@ -83,6 +95,8 @@ Web操作回归：启动预览，设置BASE_URL后运行`npm run ui:verify`和`n
 - [设置填写修复与验收](docs/QA-v0.6.2-settings-help.md)
 - [添加情报与公众号公开文章采集验收](docs/QA-v0.6.2-quick-capture.md)
 - [平台登录窗口与当前页采集验收](docs/QA-v0.6.2-platform-login.md)
+- [山东企业模拟案例包](simulations/README.md)
+- [山东企业模拟案例验收](docs/QA-v0.6.2-shandong-simulations.md)
 - [开源采集方案调研：为什么没有直接集成](docs/OPEN-SOURCE-OPTIONS.md)
 - [v0.6.1字体设计与验证](docs/QA-v0.6.1-typography.md)
 - [完整测试方案](docs/TEST-PLAN-v0.6.md)

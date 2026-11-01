@@ -1,0 +1,11 @@
+﻿ID,标题,平台,类别,优先级,状态,相关性,来源,影响
+S-01,成分透明是国产高端粮的第一信任点,小红书,consumer,high,verified,5,SRC-01,成分透明是国产高端的第一信任点。
+S-02,适口性决定复购,抖音,consumer,high,verified,5,SRC-02,适口性是复购的第一道门槛。
+S-03,肠胃敏感/软便场景是功能粮入口,线下走访,consumer,high,verified,5,SRC-07,功能粮需要真实喂养反馈。
+S-04,进口替代心智正在形成，但仍需证明,电商平台,consumer,high,pending,5,SRC-03,国产替代需要长期口碑和检测证明。
+S-05,猫粮与狗粮的购买决策不同,问卷,consumer,medium,verified,4,SRC-08,猫狗粮需要分开沟通。
+S-06,达人测评与真实喂养记录影响转化,抖音,consumer,high,verified,5,SRC-02,长期喂养记录比单次广告更有说服力。
+S-07,宠物店推荐仍是高信任渠道,线下走访,industry,high,verified,5,SRC-07,宠物店是新手的高信任入口。
+S-08,竞品用冻干/鲜肉概念抢占高端,行业媒体,competitor,high,verified,5,SRC-06,高端概念竞争激烈，需要差异化证据。
+S-09,价格带与成分升级需要匹配,电商平台,consumer,medium,disputed,4,SRC-03,成分升级需要清楚的价值解释。
+S-10,复购靠订阅/组合装而不是单次促销,线下走访,consumer,medium,verified,4,SRC-07,订阅和组合装适合高频刚需。

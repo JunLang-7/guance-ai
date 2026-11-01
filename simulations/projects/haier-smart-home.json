@@ -1,0 +1,799 @@
+{
+  "schemaVersion": 4,
+  "mode": "demo",
+  "company": {
+    "id": "C-HAIER-SMART-HOME",
+    "name": "海尔智家股份有限公司",
+    "brand": "海尔智家 / 卡萨帝",
+    "industry": "智能家电与全屋智能",
+    "region": "山东 · 青岛",
+    "stage": "全球化成熟企业，青岛上市公司",
+    "product": "全屋智能套系（模拟：厨房、洗护、空气、安防场景组合）",
+    "productSpec": "三翼鸟场景方案，含设计、安装、调试与售后服务；具体型号与价格以企业实际方案为准",
+    "goal": "在山东及华东重点城市获取全屋智能套系咨询、到店体验与设计师合作线索",
+    "budgetCents": 120000000,
+    "campaignStart": "2026-03-01",
+    "campaignEnd": "2026-03-31",
+    "updatedAt": "2026-02-19T10:00:00+08:00"
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "name": "小红书家装笔记摘录（模拟）",
+      "platform": "小红书",
+      "kind": "consumer",
+      "publishedAt": "2026-02-14",
+      "note": "按公开话题结构编写的模拟摘录，不对应真实账号或真实互动量。",
+      "simulated": true,
+      "collectedAt": "2026-02-15T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-02",
+      "name": "抖音家居短视频评论摘录（模拟）",
+      "platform": "抖音",
+      "kind": "consumer",
+      "publishedAt": "2026-02-15",
+      "note": "模拟评论集合，用于展示评论归类流程；不是平台导出报表。",
+      "simulated": true,
+      "collectedAt": "2026-02-16T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-03",
+      "name": "住小帮/家装社区问答摘要（模拟）",
+      "platform": "家装社区",
+      "kind": "consumer",
+      "publishedAt": "2026-02-16",
+      "note": "模拟问答摘要，用于观察旧房改造与全屋智能的决策语言。",
+      "simulated": true,
+      "collectedAt": "2026-02-17T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-04",
+      "name": "天猫/京东套系商品评价摘要（模拟）",
+      "platform": "电商平台",
+      "kind": "consumer",
+      "publishedAt": "2026-02-17",
+      "note": "模拟电商评价摘要，不对应真实订单或真实评分。",
+      "simulated": true,
+      "collectedAt": "2026-02-18T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-05",
+      "name": "家居行业观察（模拟）",
+      "platform": "行业媒体",
+      "kind": "industry",
+      "publishedAt": "2026-02-18",
+      "note": "虚构行业观察，仅用于模拟趋势与供给背景。",
+      "simulated": true,
+      "collectedAt": "2026-02-19T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-06",
+      "name": "竞品智能家居动态（模拟）",
+      "platform": "行业媒体",
+      "kind": "competitor",
+      "publishedAt": "2026-02-19",
+      "note": "竞品名称与活动均为模拟，不对应真实企业。",
+      "simulated": true,
+      "collectedAt": "2026-02-20T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-07",
+      "name": "青岛/济南门店走访纪要（模拟）",
+      "platform": "线下走访",
+      "kind": "industry",
+      "publishedAt": "2026-02-20",
+      "note": "模拟门店走访纪要，未进行真实访谈。",
+      "simulated": true,
+      "collectedAt": "2026-02-21T10:00:00+08:00",
+      "origin": "demo"
+    },
+    {
+      "id": "SRC-08",
+      "name": "消费者问卷 n=96（模拟）",
+      "platform": "问卷",
+      "kind": "consumer",
+      "publishedAt": "2026-02-21",
+      "note": "虚构问卷样本，仅作方向性参考，不具统计代表性。",
+      "simulated": true,
+      "collectedAt": "2026-02-22T10:00:00+08:00",
+      "origin": "demo"
+    }
+  ],
+  "signals": [
+    {
+      "id": "S-01",
+      "title": "全屋智能咨询先问“能不能一站式落地”",
+      "summary": "高意向用户最先确认的是设计、安装、调试和售后是否由同一方负责，而不是单个设备参数。",
+      "quote": "“我不想自己找装修队、电工和品牌售后，最好一家能全包。”",
+      "sourceId": "SRC-01",
+      "platform": "小红书",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "一站式交付是高端套系的第一信任门槛。",
+      "tags": [
+        "一站式",
+        "交付",
+        "家装"
+      ],
+      "capturedAt": "2026-02-21T09:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-02-23T16:00:00+08:00"
+    },
+    {
+      "id": "S-02",
+      "title": "旧房改造最怕施工复杂和破坏装修",
+      "summary": "旧房用户对布线、拆改和工期更敏感，愿意为“少破坏、快交付”支付溢价。",
+      "quote": "“新房还好，旧房一动墙就麻烦，最好能无损改造。”",
+      "sourceId": "SRC-03",
+      "platform": "家装社区",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "旧房轻改造是比新房更明确的痛点入口。",
+      "tags": [
+        "旧房",
+        "改造",
+        "施工"
+      ],
+      "capturedAt": "2026-02-21T10:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-02-23T16:00:00+08:00"
+    },
+    {
+      "id": "S-03",
+      "title": "不同品牌设备不互通是首要顾虑",
+      "summary": "用户担心智能家居被单一品牌锁定，或已有家电无法接入。",
+      "quote": "“家里已经有别的品牌空调，能不能一起控制？”",
+      "sourceId": "SRC-02",
+      "platform": "抖音",
+      "category": "consumer",
+      "priority": "high",
+      "status": "pending",
+      "relevance": 5,
+      "impact": "需要把开放互联和已购设备兼容讲清楚。",
+      "tags": [
+        "互联",
+        "生态",
+        "兼容"
+      ],
+      "capturedAt": "2026-02-21T11:00:00+08:00",
+      "note": "待核实：模拟材料，未获得原始证据；不得直接用于对外发布。"
+    },
+    {
+      "id": "S-04",
+      "title": "高端套系的价格敏感点转向设计、安装和服务",
+      "summary": "用户不是单纯比较硬件价格，而是比较设计服务、安装质量和售后责任。",
+      "quote": "“贵可以，但要告诉我设计、安装和以后维修谁来管。”",
+      "sourceId": "SRC-04",
+      "platform": "电商平台",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "高端套系的价值表达要从硬件转向服务。",
+      "tags": [
+        "价格",
+        "服务",
+        "高端"
+      ],
+      "capturedAt": "2026-02-22T12:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-02-23T16:00:00+08:00"
+    },
+    {
+      "id": "S-05",
+      "title": "卡萨帝认知强，但年轻用户觉得有距离感",
+      "summary": "年轻用户认可品牌高端，但担心风格偏成熟、价格门槛高。",
+      "quote": "“知道卡萨帝好，但感觉是父母那一代喜欢的风格。”",
+      "sourceId": "SRC-01",
+      "platform": "小红书",
+      "category": "consumer",
+      "priority": "medium",
+      "status": "pending",
+      "relevance": 4,
+      "impact": "高端品牌需要更年轻的内容翻译。",
+      "tags": [
+        "品牌",
+        "年轻化",
+        "审美"
+      ],
+      "capturedAt": "2026-02-22T13:00:00+08:00",
+      "note": "待核实：模拟材料，未获得原始证据；不得直接用于对外发布。"
+    },
+    {
+      "id": "S-06",
+      "title": "竞品用“轻量改造”切入旧房市场",
+      "summary": "竞品以不砸墙、快速安装、模块化升级为卖点，直接争夺旧房换新需求。",
+      "quote": "“不用大改，半天装好，这种更适合老房子。”",
+      "sourceId": "SRC-06",
+      "platform": "行业媒体",
+      "category": "competitor",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "旧房轻改造是可被竞品快速占位的入口。",
+      "tags": [
+        "竞品",
+        "旧房",
+        "轻改造"
+      ],
+      "capturedAt": "2026-02-22T14:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-02-23T16:00:00+08:00"
+    },
+    {
+      "id": "S-07",
+      "title": "门店体验与线上内容不一致会流失高意向咨询",
+      "summary": "用户到店后发现展示场景、价格或服务承诺与线上内容不一致，信任会快速下降。",
+      "quote": "“网上说全包，到店又说设计费另算，感觉被绕了。”",
+      "sourceId": "SRC-07",
+      "platform": "线下走访",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "线上承诺必须与门店口径统一。",
+      "tags": [
+        "门店",
+        "一致性",
+        "信任"
+      ],
+      "capturedAt": "2026-02-23T09:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-02-23T16:00:00+08:00"
+    },
+    {
+      "id": "S-08",
+      "title": "春季家装节前“全屋智能”搜索升温",
+      "summary": "春季装修决策期，全屋智能、旧房改造和家装节相关内容明显增加。",
+      "quote": "“过完年准备装修，先看全屋智能怎么配。”",
+      "sourceId": "SRC-05",
+      "platform": "行业媒体",
+      "category": "industry",
+      "priority": "medium",
+      "status": "verified",
+      "relevance": 4,
+      "impact": "春季是家装决策窗口，需要提前准备内容。",
+      "tags": [
+        "趋势",
+        "春季",
+        "家装节"
+      ],
+      "capturedAt": "2026-02-23T10:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-02-23T16:00:00+08:00"
+    },
+    {
+      "id": "S-09",
+      "title": "交付周期和安装责任边界决定成交",
+      "summary": "用户会把交付周期、安装责任和延期赔付写进决策清单。",
+      "quote": "“多久能装完？延期谁负责？这些要写清楚。”",
+      "sourceId": "SRC-02",
+      "platform": "抖音",
+      "category": "consumer",
+      "priority": "high",
+      "status": "verified",
+      "relevance": 5,
+      "impact": "交付承诺需要可核验、可追责。",
+      "tags": [
+        "交付",
+        "责任",
+        "周期"
+      ],
+      "capturedAt": "2026-02-23T11:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-02-23T16:00:00+08:00"
+    },
+    {
+      "id": "S-10",
+      "title": "设计师和装修公司是重要影响者",
+      "summary": "设计师、装修公司掌握旧房改造入口，对品牌选择和方案设计有实际影响力。",
+      "quote": "“客户通常听设计师推荐，设计师说哪个稳定就用哪个。”",
+      "sourceId": "SRC-07",
+      "platform": "线下走访",
+      "category": "industry",
+      "priority": "medium",
+      "status": "verified",
+      "relevance": 4,
+      "impact": "设计师渠道适合做高意向、长决策的内容。",
+      "tags": [
+        "设计师",
+        "渠道",
+        "影响者"
+      ],
+      "capturedAt": "2026-02-24T12:00:00+08:00",
+      "note": "人工核对：模拟材料，仅用于案例演示；执行前需复核真实来源。",
+      "verifiedAt": "2026-02-23T16:00:00+08:00"
+    }
+  ],
+  "themes": [
+    {
+      "id": "TH-01",
+      "rank": 1,
+      "title": "一站式交付能力是高端套系的第一信任门槛",
+      "summary": "高意向用户把设计、安装、调试和售后视为一个整体，先确认“谁负责到底”，再比较设备和价格。",
+      "mentionCount": 5,
+      "direction": "把“全包交付”拆成可核验的服务清单，而不是一句口号。",
+      "confidence": "high",
+      "claimType": "观测事实",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-02",
+        "S-04",
+        "S-07",
+        "S-09"
+      ],
+      "opportunity": "用服务清单、交付周期和售后责任图承接高意向咨询。",
+      "caveat": "一站式能力需要真实服务网络支撑，不能只靠内容包装。"
+    },
+    {
+      "id": "TH-02",
+      "rank": 2,
+      "title": "旧房轻改造成长入口",
+      "summary": "旧房用户对施工破坏、工期和改造复杂度更敏感，轻量化、模块化方案更容易降低决策门槛。",
+      "mentionCount": 4,
+      "direction": "把旧房场景从“全屋重装”中单独拆出，做轻量改造包。",
+      "confidence": "high",
+      "claimType": "分析推断",
+      "evidenceSignalIds": [
+        "S-02",
+        "S-03",
+        "S-06",
+        "S-08"
+      ],
+      "opportunity": "以“少破坏、快交付、可逐步升级”为核心卖点。",
+      "caveat": "轻改造可能被竞品快速复制，需要服务与交付壁垒。"
+    },
+    {
+      "id": "TH-03",
+      "rank": 3,
+      "title": "高端品牌需要年轻化内容翻译",
+      "summary": "卡萨帝的高端认知强，但年轻用户对风格和价格存在距离感，需要更生活化的内容语言。",
+      "mentionCount": 3,
+      "direction": "用真实家庭场景和设计语言降低距离感，而不是只讲品牌历史。",
+      "confidence": "medium",
+      "claimType": "分析推断",
+      "evidenceSignalIds": [
+        "S-05",
+        "S-01",
+        "S-07"
+      ],
+      "opportunity": "用年轻家庭、旧房改造和设计师共创内容承接新客。",
+      "caveat": "年轻化不能牺牲高端定位，需控制内容调性。"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "OP-01",
+      "title": "用“服务清单”承接一站式高意向",
+      "fact": "用户反复确认设计、安装、调试、售后由谁负责。",
+      "opportunity": "把服务拆成可勾选清单，并给出交付周期与责任边界。",
+      "verify": "核对真实服务网络、安装商资质与售后条款。",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-02",
+        "S-04",
+        "S-07",
+        "S-09"
+      ],
+      "tone": "positive"
+    },
+    {
+      "id": "OP-02",
+      "title": "旧房轻改造场景包",
+      "fact": "旧房用户担心破坏装修、工期长。",
+      "opportunity": "用“无损/轻量改造”内容切入，先做局部场景再扩展全屋。",
+      "verify": "需要确认旧房施工条件和真实案例。",
+      "evidenceSignalIds": [
+        "S-02",
+        "S-03",
+        "S-06",
+        "S-08"
+      ],
+      "tone": "positive"
+    },
+    {
+      "id": "OP-03",
+      "title": "设计师共创内容",
+      "fact": "设计师和装修公司是旧房改造入口。",
+      "opportunity": "邀请设计师共创场景内容，提供可复用的方案说明。",
+      "verify": "需要真实设计师合作与案例授权。",
+      "evidenceSignalIds": [
+        "S-10",
+        "S-05",
+        "S-07"
+      ],
+      "tone": "neutral"
+    }
+  ],
+  "plans": [
+    {
+      "id": "PLAN-A",
+      "code": "A",
+      "name": "方案 A：全屋智能一站式落地",
+      "shortName": "一站式落地",
+      "positioning": "把全屋智能从“买设备”转成“买一套可交付的生活场景”。",
+      "audience": "山东及华东重点城市、正在装修或旧房改造的中高收入家庭",
+      "platforms": [
+        "小红书",
+        "抖音",
+        "住小帮/家装社区",
+        "门店/体验"
+      ],
+      "formats": [
+        "内容种草",
+        "搜索承接",
+        "私域/渠道承接"
+      ],
+      "timing": "春季家装决策期，节前两周集中种草，节后两周承接咨询",
+      "coreMessage": "设计、安装、调试、售后由一套服务承接，先看服务清单，再选设备。",
+      "rationale": "一站式交付和旧房轻改造是当前最强的两个高意向切口，先用服务清单建立信任，再用场景内容承接。",
+      "constraints": [
+        "不能承诺未覆盖城市的安装服务",
+        "门店口径必须与线上一致",
+        "售后责任必须可追责"
+      ],
+      "uncertainties": [
+        "旧房施工条件差异大",
+        "以旧换新政策落地节奏不确定",
+        "设计师渠道转化周期较长"
+      ],
+      "channels": [
+        {
+          "channel": "小红书",
+          "role": "家装灵感与旧房改造内容",
+          "budgetCents": 36000000
+        },
+        {
+          "channel": "抖音",
+          "role": "短视频场景演示与同城投放",
+          "budgetCents": 36000000
+        },
+        {
+          "channel": "住小帮/家装社区",
+          "role": "长决策问答与案例",
+          "budgetCents": 24000000
+        },
+        {
+          "channel": "门店/体验",
+          "role": "到店体验与设计师接待",
+          "budgetCents": 24000000
+        }
+      ],
+      "evidenceThemeIds": [
+        "TH-01",
+        "TH-02"
+      ],
+      "updatedAt": "2026-02-27T11:00:00+08:00"
+    },
+    {
+      "id": "PLAN-B",
+      "code": "B",
+      "name": "方案 B：设计师与旧房轻改造",
+      "shortName": "设计师渠道",
+      "positioning": "用设计师和装修公司做高意向入口，先做旧房轻改造，再扩展全屋。",
+      "audience": "旧房改造家庭、设计师、装修公司",
+      "platforms": [
+        "视频号",
+        "设计师渠道",
+        "门店/体验"
+      ],
+      "formats": [
+        "内容种草",
+        "搜索承接",
+        "私域/渠道承接"
+      ],
+      "timing": "春季旧房改造旺季，设计师渠道提前两周预热",
+      "coreMessage": "不砸墙、快交付、可扩展，设计师先出方案，品牌负责交付。",
+      "rationale": "设计师掌握旧房改造入口，适合用长内容和高信任关系承接。",
+      "constraints": [
+        "设计师合作需要明确分佣与服务边界",
+        "轻改造方案需真实可落地"
+      ],
+      "uncertainties": [
+        "设计师推荐意愿不确定",
+        "旧房施工条件差异大"
+      ],
+      "channels": [
+        {
+          "channel": "视频号",
+          "role": "设计师访谈与案例",
+          "budgetCents": 24000000
+        },
+        {
+          "channel": "设计师渠道",
+          "role": "共创内容与转介绍",
+          "budgetCents": 36000000
+        },
+        {
+          "channel": "门店/体验",
+          "role": "到店体验与方案沟通",
+          "budgetCents": 60000000
+        }
+      ],
+      "evidenceThemeIds": [
+        "TH-01",
+        "TH-03"
+      ],
+      "updatedAt": "2026-02-27T11:00:00+08:00"
+    }
+  ],
+  "approvals": [
+    {
+      "id": "APR-01",
+      "planId": "PLAN-A",
+      "planCode": "A",
+      "approvedAt": "2026-02-28T17:00:00+08:00",
+      "reason": "模拟审批：方案预算、证据引用和风险约束已核对；所有效果均为模拟假设，执行前需企业真实复核。",
+      "plan": {
+        "id": "PLAN-A",
+        "code": "A",
+        "name": "方案 A：全屋智能一站式落地",
+        "shortName": "一站式落地",
+        "positioning": "把全屋智能从“买设备”转成“买一套可交付的生活场景”。",
+        "audience": "山东及华东重点城市、正在装修或旧房改造的中高收入家庭",
+        "platforms": [
+          "小红书",
+          "抖音",
+          "住小帮/家装社区",
+          "门店/体验"
+        ],
+        "formats": [
+          "内容种草",
+          "搜索承接",
+          "私域/渠道承接"
+        ],
+        "timing": "春季家装决策期，节前两周集中种草，节后两周承接咨询",
+        "coreMessage": "设计、安装、调试、售后由一套服务承接，先看服务清单，再选设备。",
+        "rationale": "一站式交付和旧房轻改造是当前最强的两个高意向切口，先用服务清单建立信任，再用场景内容承接。",
+        "constraints": [
+          "不能承诺未覆盖城市的安装服务",
+          "门店口径必须与线上一致",
+          "售后责任必须可追责"
+        ],
+        "uncertainties": [
+          "旧房施工条件差异大",
+          "以旧换新政策落地节奏不确定",
+          "设计师渠道转化周期较长"
+        ],
+        "channels": [
+          {
+            "channel": "小红书",
+            "role": "家装灵感与旧房改造内容",
+            "budgetCents": 36000000
+          },
+          {
+            "channel": "抖音",
+            "role": "短视频场景演示与同城投放",
+            "budgetCents": 36000000
+          },
+          {
+            "channel": "住小帮/家装社区",
+            "role": "长决策问答与案例",
+            "budgetCents": 24000000
+          },
+          {
+            "channel": "门店/体验",
+            "role": "到店体验与设计师接待",
+            "budgetCents": 24000000
+          }
+        ],
+        "evidenceThemeIds": [
+          "TH-01",
+          "TH-02"
+        ],
+        "updatedAt": "2026-02-27T11:00:00+08:00"
+      },
+      "companyBudgetCents": 120000000,
+      "fingerprint": "fp_ad94969d",
+      "evidenceSignalIds": [
+        "S-01",
+        "S-02",
+        "S-03",
+        "S-04",
+        "S-06",
+        "S-07",
+        "S-08",
+        "S-09"
+      ],
+      "evidence": [
+        {
+          "id": "S-01",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"全屋智能咨询先问“能不能一站式落地”\",\"高意向用户最先确认的是设计、安装、调试和售后是否由同一方负责，而不是单个设备参数。\",\"“我不想自己找装修队、电工和品牌售后，最好一家能全包。”\",\"SRC-01\",\"一站式交付是高端套系的第一信任门槛。\"]"
+        },
+        {
+          "id": "S-02",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"旧房改造最怕施工复杂和破坏装修\",\"旧房用户对布线、拆改和工期更敏感，愿意为“少破坏、快交付”支付溢价。\",\"“新房还好，旧房一动墙就麻烦，最好能无损改造。”\",\"SRC-03\",\"旧房轻改造是比新房更明确的痛点入口。\"]"
+        },
+        {
+          "id": "S-03",
+          "priority": "high",
+          "status": "pending",
+          "relevance": 5,
+          "content": "[\"不同品牌设备不互通是首要顾虑\",\"用户担心智能家居被单一品牌锁定，或已有家电无法接入。\",\"“家里已经有别的品牌空调，能不能一起控制？”\",\"SRC-02\",\"需要把开放互联和已购设备兼容讲清楚。\"]"
+        },
+        {
+          "id": "S-04",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"高端套系的价格敏感点转向设计、安装和服务\",\"用户不是单纯比较硬件价格，而是比较设计服务、安装质量和售后责任。\",\"“贵可以，但要告诉我设计、安装和以后维修谁来管。”\",\"SRC-04\",\"高端套系的价值表达要从硬件转向服务。\"]"
+        },
+        {
+          "id": "S-06",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"竞品用“轻量改造”切入旧房市场\",\"竞品以不砸墙、快速安装、模块化升级为卖点，直接争夺旧房换新需求。\",\"“不用大改，半天装好，这种更适合老房子。”\",\"SRC-06\",\"旧房轻改造是可被竞品快速占位的入口。\"]"
+        },
+        {
+          "id": "S-07",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"门店体验与线上内容不一致会流失高意向咨询\",\"用户到店后发现展示场景、价格或服务承诺与线上内容不一致，信任会快速下降。\",\"“网上说全包，到店又说设计费另算，感觉被绕了。”\",\"SRC-07\",\"线上承诺必须与门店口径统一。\"]"
+        },
+        {
+          "id": "S-08",
+          "priority": "medium",
+          "status": "verified",
+          "relevance": 4,
+          "content": "[\"春季家装节前“全屋智能”搜索升温\",\"春季装修决策期，全屋智能、旧房改造和家装节相关内容明显增加。\",\"“过完年准备装修，先看全屋智能怎么配。”\",\"SRC-05\",\"春季是家装决策窗口，需要提前准备内容。\"]"
+        },
+        {
+          "id": "S-09",
+          "priority": "high",
+          "status": "verified",
+          "relevance": 5,
+          "content": "[\"交付周期和安装责任边界决定成交\",\"用户会把交付周期、安装责任和延期赔付写进决策清单。\",\"“多久能装完？延期谁负责？这些要写清楚。”\",\"SRC-02\",\"交付承诺需要可核验、可追责。\"]"
+        }
+      ],
+      "note": "审批快照保存方案、预算上限与关键证据状态；任一项变化需重新确认。"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "REV-01",
+      "approvalId": "APR-01",
+      "planId": "PLAN-A",
+      "dataKind": "simulated",
+      "note": "模拟复盘：渠道数据为假设值，不对应真实广告账户或真实订单。",
+      "observations": "方案 A 的咨询量高于内部预期，但高意向用户更集中在“旧房改造”和“一站式服务”两类内容；门店到店率低于咨询增长，说明线上承诺与门店承接仍有落差。",
+      "possibleReasons": "服务清单内容降低了理解成本；旧房轻改造切中了真实痛点；但门店接待能力、设计师排期和报价透明度没有同步提升。",
+      "unconfirmed": "咨询到成交的真实转化率、不同城市服务覆盖差异、设计师渠道的长期贡献仍未确认。",
+      "updatedAt": "2026-04-02T15:00:00+08:00",
+      "channels": [
+        {
+          "channel": "小红书",
+          "actualSpendCents": 35200000,
+          "impressions": 3200000,
+          "clicks": 96000,
+          "leads": 620
+        },
+        {
+          "channel": "抖音",
+          "actualSpendCents": 37000000,
+          "impressions": 4800000,
+          "clicks": 120000,
+          "leads": 700
+        },
+        {
+          "channel": "住小帮/家装社区",
+          "actualSpendCents": 23200000,
+          "impressions": 1100000,
+          "clicks": 33000,
+          "leads": 210
+        },
+        {
+          "channel": "门店/体验",
+          "actualSpendCents": 23800000,
+          "impressions": 800000,
+          "clicks": 20000,
+          "leads": 160
+        }
+      ],
+      "suggestions": [
+        {
+          "id": "SUG-01",
+          "title": "把服务清单做成可下载的交付说明",
+          "detail": "在内容与门店统一使用同一份服务清单，减少“到店后口径变化”。",
+          "linkedSignalIds": [
+            "S-01",
+            "S-02",
+            "S-04",
+            "S-07",
+            "S-09"
+          ]
+        },
+        {
+          "id": "SUG-02",
+          "title": "旧房轻改造单独建承接页",
+          "detail": "把旧房用户从全屋重装内容中分流，减少无效咨询。",
+          "linkedSignalIds": [
+            "S-02",
+            "S-03",
+            "S-06",
+            "S-08"
+          ]
+        },
+        {
+          "id": "SUG-03",
+          "title": "核对门店接待与设计师排期",
+          "detail": "先确认门店能否承接咨询增长，再扩大投放。",
+          "linkedSignalIds": [
+            "S-07",
+            "S-10"
+          ]
+        }
+      ]
+    }
+  ],
+  "feedbackTasks": [
+    {
+      "id": "FT-01",
+      "title": "把服务清单做成可下载的交付说明",
+      "detail": "在内容与门店统一使用同一份服务清单，减少“到店后口径变化”。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-04-03T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-01",
+        "S-02",
+        "S-04",
+        "S-07",
+        "S-09"
+      ],
+      "source": "review"
+    },
+    {
+      "id": "FT-02",
+      "title": "旧房轻改造单独建承接页",
+      "detail": "把旧房用户从全屋重装内容中分流，减少无效咨询。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-04-04T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-02",
+        "S-03",
+        "S-06",
+        "S-08"
+      ],
+      "source": "review"
+    },
+    {
+      "id": "FT-03",
+      "title": "核对门店接待与设计师排期",
+      "detail": "先确认门店能否承接咨询增长，再扩大投放。",
+      "trigger": "来自模拟复盘 REV-01",
+      "createdAt": "2026-04-05T09:00:00+08:00",
+      "status": "open",
+      "linkedSignalIds": [
+        "S-07",
+        "S-10"
+      ],
+      "source": "review"
+    }
+  ],
+  "decision": {
+    "status": "approved",
+    "planId": "PLAN-A",
+    "updatedAt": "2026-02-28T18:00:00+08:00"
+  },
+  "activePlanId": "PLAN-A"
+}

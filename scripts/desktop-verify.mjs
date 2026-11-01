@@ -42,6 +42,11 @@ try {
   await assert.rejects(page.evaluate(() => window.guance.invoke('initialize', undefined)), /不支持/);
   results.push('IPC白名单拒绝未声明命令');
   await page.getByRole('button', { name: '设置', exact: true }).click();
+  await page.getByRole('button', { name: '模拟案例库', exact: true }).click();
+  await page.getByText('海尔智家股份有限公司', { exact: true }).waitFor({ timeout: 15000 });
+  assert.equal(await page.getByRole('button', { name: '导入为演示项目', exact: true }).count(), 5);
+  results.push('模拟案例库加载5家山东企业案例');
+  await page.getByRole('button', { name: '项目与备份', exact: true }).click();
   await page.getByLabel('新项目名称').fill('桌面持久化验收');
   await page.getByRole('button', { name: '创建项目', exact: true }).click();
   await page.getByText('项目已创建并切换', { exact: true }).waitFor();
