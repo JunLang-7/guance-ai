@@ -6,7 +6,6 @@ import { useUiStore } from '@/store/ui';
 import { applyProject, flushDesktop, refreshProject, refreshProjects, switchProject, useDesktopState } from './client';
 import { isAppData } from '@/data/repository';
 import { ModelSettings } from './ModelSettings';
-import { ConnectionSettings } from './ConnectionSettings';
 import { SyncSettings } from './SyncSettings';
 import { CaseLibrary } from './CaseLibrary';
 
@@ -24,10 +23,9 @@ export function Settings() {
   useEffect(() => { if (open) setTab(initialTab); }, [open, initialTab]);
   useEffect(() => { if (open) void refreshProjects().catch((e: unknown) => setMessage(String(e))); }, [open]);
   const run = async (operation: () => Promise<void>) => { setBusy(true); setMessage(''); try { await operation(); } catch (e) { setMessage(e instanceof Error ? e.message : '操作失败'); } finally { setBusy(false); } };
-  return <Modal open={open} onClose={close} size="lg" title="设置" description="业务数据保存到本机。普通用户直接用“市场情报 → 粘贴添加”，无需登录或密钥；官方平台和 WebDAV 都是可选项。">
-    <div className="mb-5 flex flex-wrap gap-2 border-b border-line pb-3">{['项目与备份', '模型连接', '企业技术接入', '跨设备同步（WebDAV）', '模拟案例库'].map((t) => <Button key={t} onClick={() => setTab(t)} variant={tab === t ? 'primary' : 'secondary'}>{t}</Button>)}</div>
+  return <Modal open={open} onClose={close} size="lg" title="设置" description="业务数据保存到本机。普通用户直接用“市场情报 → 添加情报”，不需要 AppID、密钥或 Cookie；模型和 WebDAV 是可选项。">
+    <div className="mb-5 flex flex-wrap gap-2 border-b border-line pb-3">{['项目与备份', '模型连接', '跨设备同步（WebDAV）', '模拟案例库'].map((t) => <Button key={t} onClick={() => setTab(t)} variant={tab === t ? 'primary' : 'secondary'}>{t}</Button>)}</div>
     {tab === '模型连接' && <ModelSettings />}
-    {tab === '企业技术接入' && <ConnectionSettings />}
     {tab === '跨设备同步（WebDAV）' && <SyncSettings />}
     {tab === '模拟案例库' && <CaseLibrary />}
     {(message || saveError) && <InfoBanner className="mb-4" tone="warning">{message || saveError}</InfoBanner>}

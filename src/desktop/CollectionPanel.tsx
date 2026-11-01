@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import { useAppStore } from '@/store/appStore';
-import { useUiStore } from '@/store/ui';
 import { refreshProject, flushDesktop, useDesktopState } from './client';
 import type { Job } from '@/types/desktop';
 import { Field, InfoBanner } from '@/components/ui/Form';
@@ -44,7 +43,7 @@ export function CollectionPanel() {
   return <details className="print-hide mx-4 my-5 rounded-xl border border-line bg-white p-5 sm:mx-8"><summary className="cursor-pointer text-sm font-semibold">高级采集 · RSS / 公开网页订阅</summary><div className="mt-4 space-y-4"><p className="text-xs leading-6 text-muted">普通用户请优先使用市场情报页的“粘贴添加”：复制公众号文章链接或抖音/小红书文案即可，不需要登录或密钥。这里适合企业已有 RSS/Atom 订阅源或固定公开网页；每次最多读取100条，入库前去重，不绕过登录。</p>
     <div className="grid gap-3 sm:grid-cols-[140px_1fr]"><Field label="采集方式" htmlFor="collect-kind"><select id="collect-kind" className="input" value={kind} onChange={(e) => setKind(e.target.value as 'web' | 'rss')}><option value="rss">RSS / Atom</option><option value="web">公开网页</option></select></Field><Field label="公开来源地址" htmlFor="collect-url"><input id="collect-url" className="input" type="url" placeholder="https://…" value={url} onChange={(e) => setUrl(e.target.value)} /></Field></div>
     <Field label="关联复盘建议（可选）" htmlFor="collect-trigger"><select id="collect-trigger" className="input" value={trigger} onChange={(e) => setTrigger(e.target.value)}><option value="">独立采集任务</option>{feedback.filter((t) => t.status === 'open').map((t) => <option key={t.id} value={t.id}>{t.title}</option>)}</select></Field>
-    <div className="flex flex-wrap gap-2"><Button variant="primary" disabled={!url || visibleJobs.some((j) => j.status === 'running')} onClick={() => void start()}>开始采集</Button><Button onClick={() => useUiStore.getState().openSettings('企业技术接入')}>企业技术接入（普通用户无需）</Button></div>
+    <div className="flex flex-wrap gap-2"><Button variant="primary" disabled={!url || visibleJobs.some((j) => j.status === 'running')} onClick={() => void start()}>开始采集</Button></div>
     {message && <InfoBanner>{message}</InfoBanner>}{visibleJobs.slice(0, 8).map((j) => <InfoBanner key={j.id} title={`${j.createdAt} · ${j.status}`}><p>{j.error ?? j.result ?? j.progress}</p>{j.status === 'running' ? <Button size="sm" onClick={() => void cancel(j)}>取消</Button> : j.status !== 'completed' && <Button size="sm" onClick={() => void retry(j)}>手动重试 / 恢复</Button>}</InfoBanner>)}
   </div></details>;
 }
