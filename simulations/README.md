@@ -2,30 +2,29 @@
 
 本目录包含 5 家山东企业的模拟营销决策案例，覆盖智能家电、啤酒、商用车动力、滋补健康和宠物食品五个行业。每个案例包含：
 
-- `reports/<slug>.md`：至少一万字的过程性报告（含图表）。
+- `reports/案例集.md`：5 家企业合并后的案例集，每个案例至少一万字，含图表；正文未改写。
 - `projects/<slug>.json`：可导入观策AI的模拟项目数据。
 - `charts/<slug>/`：封面、信号结构、预算、计划 vs 实际、指标对比、可信度图。
 - `data/<slug>-signals.csv`：信号清单。
 - `data/<slug>-channels.csv`：渠道计划与模拟实际数据。
-- `results.csv` / `results.md`：5 个案例的结果数据总表（预算、线索、CTR、CPC、CPL、MAPE、可信度、满意度、适配性）。
 
 ## 案例列表
 
 | 企业 | 行业 | 模拟预算 | 报告 | 项目数据 |
 | --- | --- | --- | --- | --- |
-| 海尔智家股份有限公司 | 智能家电与全屋智能 | 120 万 | reports/haier-smart-home.md | projects/haier-smart-home.json |
-| 青岛啤酒股份有限公司 | 啤酒与高端饮品 | 80 万 | reports/tsingtao-premium-beer.md | projects/tsingtao-premium-beer.json |
-| 潍柴动力股份有限公司 | 商用车动力与高端装备 | 60 万 | reports/weichai-powertrain.md | projects/weichai-powertrain.json |
-| 东阿阿胶股份有限公司 | 滋补健康与中式养生 | 50 万 | reports/dongee-ejiao.md | projects/dongee-ejiao.json |
-| 乖宝宠物食品集团股份有限公司 | 宠物食品与宠物消费 | 40 万 | reports/gambol-pet-food.md | projects/gambol-pet-food.json |
+| 海尔智家股份有限公司 | 智能家电与全屋智能 | 120 万 | 案例集.md | projects/haier-smart-home.json |
+| 青岛啤酒股份有限公司 | 啤酒与高端饮品 | 80 万 | 案例集.md | projects/tsingtao-premium-beer.json |
+| 潍柴动力股份有限公司 | 商用车动力与高端装备 | 60 万 | 案例集.md | projects/weichai-powertrain.json |
+| 东阿阿胶股份有限公司 | 滋补健康与中式养生 | 50 万 | 案例集.md | projects/dongee-ejiao.json |
+| 乖宝宠物食品集团股份有限公司 | 宠物食品与宠物消费 | 40 万 | 案例集.md | projects/gambol-pet-food.json |
 
 ## 怎么用
 
 1. 打开观策AI桌面端。
-2. 设置 → 项目与备份 → 导入项目 JSON。
-3. 选择 `projects/<slug>.json`。
+2. 设置 → 模拟案例库 → 选择案例 → 导入为演示项目。
+3. 也可以设置 → 项目与备份 → 导入项目 JSON，选择 `projects/<slug>.json`。
 4. 在市场情报、策略、复盘页查看信号、主题、方案、审批和复盘。
-5. 对照 `reports/<slug>.md` 阅读过程材料。
+5. 打开 `reports/案例集.md`，按目录阅读对应企业章节。
 
 ## 重要声明
 
@@ -35,5 +34,4 @@
 
 - [方法与可信度](methodology.md)
 - [可信度对比](credibility-summary.md)
-- [结果数据总表](results.md)
 - [迭代记录](iteration-log.md)

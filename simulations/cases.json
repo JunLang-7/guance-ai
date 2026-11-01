@@ -82,7 +82,7 @@
       ]
     },
     "projectFile": "projects/haier-smart-home.json",
-    "reportFile": "reports/haier-smart-home.md",
+    "reportFile": "reports/案例集.md",
     "chartDir": "charts/haier-smart-home",
     "counts": {
       "sources": 8,
@@ -196,7 +196,7 @@
       ]
     },
     "projectFile": "projects/tsingtao-premium-beer.json",
-    "reportFile": "reports/tsingtao-premium-beer.md",
+    "reportFile": "reports/案例集.md",
     "chartDir": "charts/tsingtao-premium-beer",
     "counts": {
       "sources": 8,
@@ -310,7 +310,7 @@
       ]
     },
     "projectFile": "projects/weichai-powertrain.json",
-    "reportFile": "reports/weichai-powertrain.md",
+    "reportFile": "reports/案例集.md",
     "chartDir": "charts/weichai-powertrain",
     "counts": {
       "sources": 8,
@@ -424,7 +424,7 @@
       ]
     },
     "projectFile": "projects/dongee-ejiao.json",
-    "reportFile": "reports/dongee-ejiao.md",
+    "reportFile": "reports/案例集.md",
     "chartDir": "charts/dongee-ejiao",
     "counts": {
       "sources": 8,
@@ -538,7 +538,7 @@
       ]
     },
     "projectFile": "projects/gambol-pet-food.json",
-    "reportFile": "reports/gambol-pet-food.md",
+    "reportFile": "reports/案例集.md",
     "chartDir": "charts/gambol-pet-food",
     "counts": {
       "sources": 8,

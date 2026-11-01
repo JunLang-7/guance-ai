@@ -14,7 +14,7 @@
     "satisfaction": 4.2,
     "fit": "高",
     "projectFile": "haier-smart-home.json",
-    "reportFile": "reports/haier-smart-home.md"
+    "reportFile": "reports/案例集.md"
   },
   {
     "slug": "tsingtao-premium-beer",
@@ -31,7 +31,7 @@
     "satisfaction": 4.0,
     "fit": "较高",
     "projectFile": "tsingtao-premium-beer.json",
-    "reportFile": "reports/tsingtao-premium-beer.md"
+    "reportFile": "reports/案例集.md"
   },
   {
     "slug": "weichai-powertrain",
@@ -48,7 +48,7 @@
     "satisfaction": 3.8,
     "fit": "中高",
     "projectFile": "weichai-powertrain.json",
-    "reportFile": "reports/weichai-powertrain.md"
+    "reportFile": "reports/案例集.md"
   },
   {
     "slug": "dongee-ejiao",
@@ -65,7 +65,7 @@
     "satisfaction": 3.5,
     "fit": "中",
     "projectFile": "dongee-ejiao.json",
-    "reportFile": "reports/dongee-ejiao.md"
+    "reportFile": "reports/案例集.md"
   },
   {
     "slug": "gambol-pet-food",
@@ -82,6 +82,6 @@
     "satisfaction": 4.1,
     "fit": "较高",
     "projectFile": "gambol-pet-food.json",
-    "reportFile": "reports/gambol-pet-food.md"
+    "reportFile": "reports/案例集.md"
   }
 ]

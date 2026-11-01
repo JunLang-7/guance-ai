@@ -70,7 +70,7 @@ export function CaseLibrary() {
           <span>满意度：{item.satisfaction} / 5</span>
           <span>适配性：{item.fit}</span>
         </div>
-        <p className="mt-2 break-all text-[10px] text-faint">报告：{item.reportFile}</p>
+        <p className="mt-2 break-all text-[10px] text-faint">报告：案例集.md（合并版）</p>
         <Button className="mt-3" size="sm" variant="primary" disabled={busy === item.slug} onClick={() => void importCase(item)}>{busy === item.slug ? '导入中…' : '导入为演示项目'}</Button>
       </section>)}
     </div>

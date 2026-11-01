@@ -700,12 +700,12 @@ def iteration():
 
 
 def readme(metadata):
-    rows = [[meta["name"], meta["industry"], f"{meta['budgetYuan']/10000:.0f} 万", meta["reportFile"], meta["projectFile"]] for meta in metadata]
+    rows = [[meta["name"], meta["industry"], f"{meta['budgetYuan']/10000:.0f} 万", '案例集.md', meta["projectFile"]] for meta in metadata]
     text = f"""# 山东企业模拟案例包
 
 本目录包含 5 家山东企业的模拟营销决策案例，覆盖智能家电、啤酒、商用车动力、滋补健康和宠物食品五个行业。每个案例包含：
 
-- `reports/<slug>.md`：至少一万字的过程性报告（含图表）。
+- `reports/案例集.md`：5 家企业合并后的案例集，每个案例至少一万字，含图表；正文未改写。
 - `projects/<slug>.json`：可导入观策AI的模拟项目数据。
 - `charts/<slug>/`：封面、信号结构、预算、计划 vs 实际、指标对比、可信度图。
 - `data/<slug>-signals.csv`：信号清单。
@@ -718,10 +718,10 @@ def readme(metadata):
 ## 怎么用
 
 1. 打开观策AI桌面端。
-2. 设置 → 项目与备份 → 导入项目 JSON。
-3. 选择 `projects/<slug>.json`。
+2. 设置 → 模拟案例库 → 选择案例 → 导入为演示项目。
+3. 也可以设置 → 项目与备份 → 导入项目 JSON，选择 `projects/<slug>.json`。
 4. 在市场情报、策略、复盘页查看信号、主题、方案、审批和复盘。
-5. 对照 `reports/<slug>.md` 阅读过程材料。
+5. 打开 `reports/案例集.md`，按目录阅读对应企业章节。
 
 ## 重要声明
 
@@ -736,15 +736,55 @@ def readme(metadata):
     (SIM / "README.md").write_text(text, encoding="utf-8")
 
 
+def combine_reports(reports):
+    NL = chr(10)
+    order = [
+        ("海尔智家股份有限公司", "智能家电 / 全屋智能"),
+        ("青岛啤酒股份有限公司", "啤酒 / 高端饮品"),
+        ("潍柴动力股份有限公司", "商用车动力 / 装备"),
+        ("东阿阿胶股份有限公司", "滋补健康"),
+        ("乖宝宠物食品集团股份有限公司", "宠物食品"),
+    ]
+    toc = [f"{index}. {name}｜{industry}" for index, (name, industry) in enumerate(order, 1)]
+    header = NL.join([
+        "# 山东企业模拟案例集",
+        "",
+        "> **重要说明**：本案例集是企业营销决策的模拟验收材料。企业名称与业务方向来自公开资料；消费者语句、竞品观察、渠道数据、复盘结果和“企业满意度”均为模拟，不代表企业真实意见、真实广告账户、真实消费者调研或真实经营数据。任何对外使用前，必须由企业市场、法务、合规和数据负责人复核。",
+        ">",
+        "> 本文件将 5 家山东企业的独立案例合并为一个案例集，正文内容保持原样，未改写。",
+        "",
+        "## 案例目录",
+        "",
+        *toc,
+        "",
+        "## 使用说明",
+        "",
+        "- 每个案例均包含企业背景、资料收集过程、信号编码、主题研判、A/B 方案、审批快照、复盘结果、历史基线回测、可信度评分、企业适配性与迭代建议。",
+        "- 每个案例的图表按相对路径引用 `../charts/<slug>/`。",
+        "- 结果数据总表另见 `../results.md` 和 `../results.csv`。",
+        "- 所有数据均为模拟，不能替代企业真实历史数据、真实广告账户或真实消费者调研。",
+        "",
+        "---",
+        "",
+    ])
+    body = (NL * 2 + "---" + NL * 2).join(report.rstrip() for _, report in reports)
+    return header + body + NL
+
+
 def main():
     metadata = json.loads((SIM / "cases.json").read_text(encoding="utf-8"))
+    reports = []
     for meta in metadata:
         data = json.loads((SIM / "projects" / f"{meta['slug']}.json").read_text(encoding="utf-8"))
         plot(meta, data)
         text = build_report(meta, data)
         text = ensure_length(text, meta, data)
-        (REPORT_DIR / f"{meta['slug']}.md").write_text(text, encoding="utf-8")
+        reports.append((meta, text))
         print(meta["slug"], "chars", chinese_count(text))
+    (REPORT_DIR / "案例集.md").write_text(combine_reports(reports), encoding="utf-8")
+    for path in REPORT_DIR.glob("*.md"):
+        if path.name != "案例集.md":
+            path.unlink()
     results(metadata)
     summary(metadata)
     methodology()
