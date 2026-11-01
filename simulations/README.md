@@ -7,6 +7,7 @@
 - `charts/<slug>/`：封面、信号结构、预算、计划 vs 实际、指标对比、可信度图。
 - `data/<slug>-signals.csv`：信号清单。
 - `data/<slug>-channels.csv`：渠道计划与模拟实际数据。
+- `results.csv` / `results.md`：5 个案例的结果数据总表（预算、线索、CTR、CPC、CPL、MAPE、可信度、满意度、适配性）。
 
 ## 案例列表
 
@@ -21,11 +22,10 @@
 ## 怎么用
 
 1. 打开观策AI桌面端。
-2. 设置 → 模拟案例库 → 选择案例 → 导入为演示项目。
-3. 在市场情报、策略、复盘页查看信号、主题、方案、审批和复盘。
-4. 对照 `reports/<slug>.md` 阅读过程材料。
-
-也可以在设置→项目与备份→导入项目 JSON 中手动选择 `projects/<slug>.json`。
+2. 设置 → 项目与备份 → 导入项目 JSON。
+3. 选择 `projects/<slug>.json`。
+4. 在市场情报、策略、复盘页查看信号、主题、方案、审批和复盘。
+5. 对照 `reports/<slug>.md` 阅读过程材料。
 
 ## 重要声明
 
@@ -35,4 +35,5 @@
 
 - [方法与可信度](methodology.md)
 - [可信度对比](credibility-summary.md)
+- [结果数据总表](results.md)
 - [迭代记录](iteration-log.md)

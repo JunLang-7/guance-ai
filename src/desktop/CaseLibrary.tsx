@@ -11,6 +11,9 @@ interface CaseMeta {
   budgetYuan: number;
   targetLeads: number;
   leads: number;
+  cpl: number;
+  ctr: number;
+  mape: number;
   credibility: number;
   satisfaction: number;
   fit: string;
@@ -60,6 +63,9 @@ export function CaseLibrary() {
         <div className="mt-3 grid grid-cols-2 gap-2 text-[11px] leading-5 text-muted">
           <span>预算：{item.budgetYuan.toLocaleString()} 元</span>
           <span>线索：{item.leads} / {item.targetLeads}</span>
+          <span>线索成本：{item.cpl.toFixed(0)} 元</span>
+          <span>CTR：{item.ctr.toFixed(2)}%</span>
+          <span>MAPE：{item.mape.toFixed(1)}%</span>
           <span>可信度：{item.credibility.toFixed(1)} / 100</span>
           <span>满意度：{item.satisfaction} / 5</span>
           <span>适配性：{item.fit}</span>

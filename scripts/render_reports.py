@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import json
 import re
 from pathlib import Path
@@ -31,6 +32,9 @@ def table(headers, rows):
     ])
 
 
+CATEGORY_LABELS = {'consumer': '消费者', 'competitor': '竞品', 'industry': '行业'}
+
+
 def build_report(meta, data):
     m = meta["metrics"]
     company = data["company"]
@@ -60,10 +64,10 @@ def build_report(meta, data):
         cpl = spend / 100 / leads if leads else None
         channel_rows.append([channel["channel"], cny(channel["budgetCents"]), cny(spend), num(impressions), num(clicks), num(leads), f"{ctr*100:.2f}%" if ctr else "—", f"{cpc:.2f}" if cpc else "—", f"{cpl:.0f}" if cpl else "—"])
     total_row = ["合计", cny(m["plannedCents"]), cny(m["actualSpendCents"]), num(m["impressions"]), num(m["clicks"]), num(m["leads"]), f"{(m['ctr'] or 0)*100:.2f}%", f"{m['cpcYuan'] or 0:.2f}", f"{m['cplYuan'] or 0:.0f}"]
-    signal_rows = [[s["id"], s["platform"], s["category"], s["priority"], s["status"], s["title"], s["impact"]] for s in signals]
-    source_rows = [[s["id"], s["name"], s["platform"], s["kind"], s["publishedAt"], "模拟"] for s in sources]
+    signal_rows = [[s["id"], s["platform"], CATEGORY_LABELS.get(s["category"], s["category"]), s["priority"], s["status"], s["title"], s["impact"]] for s in signals]
+    source_rows = [[s["id"], s["name"], s["platform"], CATEGORY_LABELS.get(s["kind"], s["kind"]), s["publishedAt"], "模拟"] for s in sources]
     theme_rows = [[t["id"], t["title"], f"{t['confidence']}/{t['claimType']}", "、".join(t["evidenceSignalIds"]), t["caveat"]] for t in themes]
-    plan_rows = [["A", plan_a["name"], cny(sum(c["budgetCents"] for c in plan_a["channels"])), "、".join(c["channel"] for c in plan_a["channels"]), plan_a["coreMessage"]], ["B", plan_b["name"], cny(sum(c["budgetCents"] for c in plan_b["channels"])), "、".join(c["channel"] for c in plan_b["channels"]), plan_b["coreMessage"]]]
+    plan_rows = [["A", plan_a["name"].replace("方案 A：", ""), cny(sum(c["budgetCents"] for c in plan_a["channels"])), "、".join(c["channel"] for c in plan_a["channels"]), plan_a["coreMessage"]], ["B", plan_b["name"].replace("方案 B：", ""), cny(sum(c["budgetCents"] for c in plan_b["channels"])), "、".join(c["channel"] for c in plan_b["channels"]), plan_b["coreMessage"]]]
     sat_rows = [[n, f"{s}/5", c] for n, s, c in satisfaction["criteria"]]
     timeline = [("T-15", "确定企业与公开资料范围", "完成"), ("T-12", "建立来源清单与采集模板", "完成"), ("T-8", "采集模拟消费者/竞品/行业信号", "完成"), ("T-6", "去重、分类、标注证据状态", "完成"), ("T-5", "人工核验与冲突保留", "完成"), ("T-3", "归纳主题与 A/B 方案", "完成"), ("T-2", "预算校验与审批快照", "完成"), ("T", "模拟投放", "模拟"), ("T+2", "渠道数据复盘", "完成"), ("T+3", "历史基线回测与可信度", "完成"), ("T+5", "适配性判断与迭代", "完成")]
     text = f"""# {meta['name']}｜观策AI 山东企业模拟案例
@@ -79,6 +83,10 @@ def build_report(meta, data):
 本案例的核心判断是：**{story['decision'][0]}** 从模拟结果看，方案 A 的线索完成率为 {m['leadAchievement']*100:.1f}%，线索成本为 {m['cplYuan']:.0f} 元，CTR 为 {(m['ctr'] or 0)*100:.2f}%；与历史基线相比，MAPE 为 {m['mape']*100:.1f}%，可信度评分为 {m['credibility']:.1f}/100。这个结果说明方案有可执行性，但仍有明确的复核边界。
 
 **模拟企业满意度：{satisfaction['score']}/5。** {satisfaction['overall']}
+
+### 0.1 关键结果数据
+
+{table(['指标', '数值'], [['模拟预算', cny(company['budgetCents'])], ['模拟实际花费', cny(m['actualSpendCents'])], ['预算利用率', f"{(m['budgetUtilization'] or 0)*100:.1f}%"], ['目标线索', f"{meta['targetLeads']:,} 条"], ['实际线索', f"{m['leads']:,} 条"], ['线索完成率', f"{(m['leadAchievement'] or 0)*100:.1f}%"], ['曝光', f"{m['impressions']:,}"], ['点击', f"{m['clicks']:,}"], ['CTR', f"{(m['ctr'] or 0)*100:.2f}%"], ['CPC', f"{m['cpcYuan']:.2f} 元"], ['线索成本', f"{m['cplYuan']:.0f} 元"], ['历史基线 MAPE', f"{m['mape']*100:.1f}%"], ['综合可信度', f"{m['credibility']:.1f}/100"], ['模拟满意度', f"{satisfaction['score']}/5"], ['适配性', fit['level']]])}
 
 ## 1. 企业公开资料与模拟边界
 
@@ -210,7 +218,7 @@ def build_report(meta, data):
 
 {table(['方案', '名称', '总预算', '渠道', '核心信息'], plan_rows)}
 
-### 6.2 方案 A：{plan_a['name']}
+### 6.2 {plan_a['name']}
 
 - 定位：{plan_a['positioning']}
 - 人群：{plan_a['audience']}
@@ -220,7 +228,7 @@ def build_report(meta, data):
 - 约束：{'；'.join(plan_a['constraints'])}
 - 不确定项：{'；'.join(plan_a['uncertainties'])}
 
-### 6.3 方案 B：{plan_b['name']}
+### 6.3 {plan_b['name']}
 
 - 定位：{plan_b['positioning']}
 - 人群：{plan_b['audience']}
@@ -488,6 +496,39 @@ def ensure_length(text, meta, data):
     return text + NL * 2 + (NL * 2).join(parts)
 
 
+def results(metadata):
+    rows = []
+    for meta in metadata:
+        m = meta["metrics"]
+        rows.append([
+            meta["name"], meta["industry"], meta["budgetYuan"], m["actualSpendCents"] // 100,
+            round((m["budgetUtilization"] or 0) * 100, 1), meta["targetLeads"], m["leads"],
+            round((m["leadAchievement"] or 0) * 100, 1), m["impressions"], m["clicks"],
+            round((m["ctr"] or 0) * 100, 2), round(m["cpcYuan"] or 0, 2), round(m["cplYuan"] or 0, 0),
+            round(m["mape"] * 100, 1), m["credibility"], meta["satisfaction"]["score"], meta["fit"]["level"],
+        ])
+    headers = ["企业", "行业", "模拟预算(元)", "模拟实际花费(元)", "预算利用率(%)", "目标线索", "实际线索", "线索完成率(%)", "曝光", "点击", "CTR(%)", "CPC(元)", "线索成本(元)", "MAPE(%)", "可信度", "满意度", "适配性"]
+    with (SIM / "results.csv").open("w", newline="", encoding="utf-8-sig") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(headers)
+        writer.writerows(rows)
+    markdown = f"""# 山东企业模拟案例：结果数据总表
+
+> 所有数据均为模拟，不代表企业真实经营数据。
+
+{table(headers, rows)}
+
+## 读表说明
+
+- 预算利用率 = 模拟实际花费 ÷ 模拟预算。
+- 线索完成率 = 实际线索 ÷ 目标线索。
+- MAPE = 实际结果与历史模拟基线的平均相对偏差；越高表示偏离越大。
+- 可信度 = 数据完整性、证据核实率、来源多样性、历史基线强度、偏差拟合度、非模型依赖的加权分。
+- 满意度为模拟企业市场负责人视角，不代表企业真实意见。
+"""
+    (SIM / "results.md").write_text(markdown, encoding="utf-8")
+
+
 def summary(metadata):
     rows = []
     for meta in metadata:
@@ -704,6 +745,7 @@ def main():
         text = ensure_length(text, meta, data)
         (REPORT_DIR / f"{meta['slug']}.md").write_text(text, encoding="utf-8")
         print(meta["slug"], "chars", chinese_count(text))
+    results(metadata)
     summary(metadata)
     methodology()
     iteration()
